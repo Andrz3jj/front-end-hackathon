@@ -11,7 +11,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="shadow sticky top-0">
+        <nav className="shadow sticky top-0 bg-slate-800 text-white">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4 md:px-12">
                 <div className="flex items-center mb-4 md:mb-0">
                     <img src={logo} className="w-12 mr-2" alt="ExoSky Logo" />
@@ -33,9 +33,9 @@ const Navbar = () => {
                 </div>
 
                 <div className={`flex flex-col md:flex-row md:space-x-4 transition-all duration-500 ease-in-out ${isOpen ? 'max-h-64' : 'max-h-0'} overflow-hidden md:overflow-visible md:max-h-none`}>
-                    <Link className="text-2xl m-2 hover:bg-gray-200 rounded p-2 transition active:bg-gray-300" to="/Exoplanets">Egzoplanety</Link>
-                    <Link className="text-2xl m-2 hover:bg-gray-200 rounded p-2 transition active:bg-gray-300" to="/Forum">Forum</Link>
-                    <Link className="text-2xl m-2 hover:bg-gray-200 rounded p-2 transition active:bg-gray-300" to="/AboutUs">O nas</Link>
+                    <Link className="text-2xl m-2 hover:bg-slate-900 rounded p-2 transition active:bg-slate-950" to="/Exoplanets">Egzoplanety</Link>
+                    <Link className="text-2xl m-2 hover:bg-slate-900 rounded p-2 transition active:bg-slate-950" to="/Forum">Forum</Link>
+                    <Link className="text-2xl m-2 hover:bg-slate-900 rounded p-2 transition active:bg-slate-950" to="/AboutUs">O nas</Link>
                 </div>
             </div>
         </nav>
