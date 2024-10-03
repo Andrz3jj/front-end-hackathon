@@ -7,5 +7,8 @@ body {
   /*font-optical-sizing: auto;*/
   /*font-weight: 400;*/
   /*font-style: normal;*/
-  /*background-image: url("../src/assets/background.jpg") ;*/
+}
+
+#background {
+  background-image: url("../src/assets/background.jpg");
 }
