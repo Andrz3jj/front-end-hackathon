@@ -5,7 +5,7 @@ import Navbar from "./Navbar.tsx";
 const Forum = () => {
     return (
         <>
-            <span>forum</span>
+            <span>Forum</span>
         </>
     );
 };
