@@ -12,7 +12,7 @@ import aboutUs from "../assets/aboutUs.png";
 
 const MainPage = () => {
     return (
-        <div className="bg-slate-700" id="background">
+        <div className="bg-slate-700 background">
             <div className="w-screen h-screen flex flex-col items-center justify-center container mx-auto">
                 <div className="flex flex-col md:flex-row items-center justify-center md:items-start p-4 md:p-8">
                     <div className="text-center md:text-left md:w-1/2 flex flex-col items-center md:items-start mt-16">
@@ -37,7 +37,7 @@ const MainPage = () => {
 
                 <div className="flex flex-col md:flex-row items-center justify-center md:items-start mt-16">
                     <div className="flex flex-col items-center md:items-start md:w-1/2">
-                        <img src={aboutUs} alt="aboutUs" className="max-w-xs md:max-w-xs lg:max-w-sm"/>
+                        <img src={aboutUs} alt="aboutUs" className="max-w-xs md:max-w-xs lg:max-w-sm rounded"/>
                     </div>
                     <div
                         className="flex flex-col items-center justify-center text-center md:text-left md:w-1/2 mt-8">

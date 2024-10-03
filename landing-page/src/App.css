@@ -9,6 +9,10 @@ body {
   /*font-style: normal;*/
 }
 
-#background {
+.background {
   background-image: url("../src/assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
