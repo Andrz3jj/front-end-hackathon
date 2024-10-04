@@ -19,15 +19,15 @@ const MainPage = () => {
                         <span
                             className="text-2xl md:text-4xl font-bold text-center text-white">Odkrywaj Nowe Światy!</span><br/>
                         <span className="text-gray-600 text-sm md:text-md text-center text-white">
-                                        Przeglądaj tysiące planet krążących wokół innych gwiazd,<br/>
-                                        odkrywaj fascynujące światy i dowiedz się,<br/>
-                                        jak mogą wyglądać egzoplanety poza naszym Układem Słonecznym.<br/>
-                                        <Link to="/Exoplanets"
-                                              className="text-center bg-blue-600 text-white shadow p-2 md:p-3 rounded hover:bg-blue-700 active:bg-blue-800 transition inline-flex items-center mt-4 md:mt-6">
-                                        Poznaj egzoplanety
-                                        <Icon.ArrowRight size={20} color="white" className="ml-2"/>
-                                        </Link>
-                                    </span>
+                            Przeglądaj tysiące planet krążących wokół innych gwiazd,<br/>
+                            odkrywaj fascynujące światy i dowiedz się,<br/>
+                            jak mogą wyglądać egzoplanety poza naszym Układem Słonecznym.<br/>
+                            <Link to="/Exoplanets"
+                                  className="text-center bg-blue-600 text-white shadow p-2 md:p-3 rounded hover:bg-blue-700 active:bg-blue-800 transition inline-flex items-center mt-4 md:mt-6">
+                                Poznaj egzoplanety
+                                <Icon.ArrowRight size={20} color="white" className="ml-2"/>
+                            </Link>
+                        </span>
                     </div>
                     <div className="flex justify-center md:justify-end sm:mt-8 md:mt-0 md:w-1/2">
                         <img src={exoplanet} alt="egzoplaneta"
@@ -43,19 +43,18 @@ const MainPage = () => {
                         className="flex flex-col items-center justify-center text-center md:text-left md:w-1/2 mt-8">
                         <span className="text-2xl md:text-4xl font-bold text-white">Prawy Przycisk Myszy</span><br/>
                         <span className="text-gray-600 text-sm md:text-md text-center text-white">
-                                        Cześć, jesteśmy grupą pasjonatów technologii<br/>
-                                        Naszym celem jest stworzenie innowacyjnej strony internetowej poświęconej egzoplanetom.<br/>
-                                        Chcemy zainspirować ludzi do odkrywania tajemnic wszechświata,<br/>
-                                        przeglądania fascynujących światów krążących wokół innych gwiazd oraz dzielenia się najnowszymi odkryciami naukowymi.<br/>
-                                        <Link to="/AboutUs"
-                                              className="text-center bg-blue-600 text-white shadow p-2 md:p-3 rounded hover:bg-blue-700 active:bg-blue-800 transition inline-flex items-center mt-4 md:mt-6">
-                                        Poznaj nasz team
-                                        <Icon.ArrowRight size={20} color="white" className="ml-2"/>
-                                        </Link>
-                                    </span>
+                            Cześć, jesteśmy grupą pasjonatów technologii<br/>
+                            Naszym celem jest stworzenie innowacyjnej strony internetowej poświęconej egzoplanetom.<br/>
+                            Chcemy zainspirować ludzi do odkrywania tajemnic wszechświata,<br/>
+                            przeglądania fascynujących światów krążących wokół innych gwiazd oraz dzielenia się najnowszymi odkryciami naukowymi.<br/>
+                            <Link to="/AboutUs"
+                                  className="text-center bg-blue-600 text-white shadow p-2 md:p-3 rounded hover:bg-blue-700 active:bg-blue-800 transition inline-flex items-center mt-4 md:mt-6">
+                                Poznaj nasz team
+                                <Icon.ArrowRight size={20} color="white" className="ml-2"/>
+                            </Link>
+                        </span>
                     </div>
                 </div>
-
             </div>
         </div>
     )

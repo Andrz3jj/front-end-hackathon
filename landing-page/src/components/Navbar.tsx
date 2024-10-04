@@ -36,7 +36,7 @@ const Navbar = () => {
                     <Link className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl" to="/Exoplanets">Egzoplanety</Link>
                     <Link className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl" to="/Forum">Forum</Link>
                     <Link className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl" to="/AboutUs">O nas</Link>
-                    <Link className="text-2xl m-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 rounded p-2 transition active:shadow-xl" to="/loginPage">Zaloguj się</Link>
+                    <Link className="text-2xl m-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-center rounded p-2 transition active:shadow-xl" to="/loginPage">Zaloguj się</Link>
                 </div>
             </div>
         </nav>

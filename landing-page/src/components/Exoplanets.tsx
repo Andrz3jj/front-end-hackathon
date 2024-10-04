@@ -7,12 +7,12 @@ const Exoplanets = () => {
     return (
         <>
             <div className="bg-slate-800 min-h-screen">
-                <div className="flex items-center justify-center w-full h-full">
-                    <div className="relative w-1/2 mt-12">
+                <div className="flex items-center justify-center w-full h-full px-4">
+                    <div className="relative w-full max-w-md mt-12">
                         <input
                             type="text"
                             placeholder="ExoSearch"
-                            className="bg-gray-200 shadow rounded bg-slate-600 placeholder-gray-400 text-black p-2 focus:outline-none focus:shadow-xl text-white transition w-full pr-10"
+                            className="bg-slate-600 shadow rounded placeholder-gray-400 text-black p-2 focus:outline-none focus:shadow-xl text-white transition w-full"
                         />
                         <Icon.Keyboard
                             size={20}
