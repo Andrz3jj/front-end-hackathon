@@ -5,11 +5,9 @@ import Exoplanets from "./components/Exoplanets";
 import MainPage from "./components/MainPage";
 import Forum from "./components/Forum";
 import AboutUs from "./components/AboutUs";
+import LoginPage from "./components/LoginPage";
+import RegisterPage from "./components/registerPage";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import * as Icon from 'react-bootstrap-icons';
-import { Link } from "react-router-dom";
-import exoplanet from "./assets/exoplanet.png";
-import aboutUs from "./assets/aboutUs.png";
 
 const App = () => {
     return (
@@ -21,6 +19,8 @@ const App = () => {
                 <Route path="/Exoplanets" element={<Exoplanets/>}/>
                 <Route path="/Forum" element={<Forum/>}/>
                 <Route path="/AboutUs" element={<AboutUs/>}/>
+                <Route path="/LoginPage" element={<LoginPage/>}/>
+                <Route path="/registerPage" element={<RegisterPage/>} />
             </Routes>
         </Router>
     );
