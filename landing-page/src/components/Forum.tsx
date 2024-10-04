@@ -5,7 +5,9 @@ import Navbar from "./Navbar.tsx";
 const Forum = () => {
     return (
         <>
-            <span>Forum</span>
+            <div className="bg-slate-800 text-white min-h-screen">
+                <span>Forum</span>
+            </div>
         </>
     );
 };

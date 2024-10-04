@@ -5,7 +5,9 @@ import Navbar from "./Navbar.tsx";
 const AboutUs = () => {
     return (
         <>
-            <span>o nas</span>
+            <div className="bg-slate-800 text-white min-h-screen">
+                <span>o nas</span>
+            </div>
         </>
     );
 };

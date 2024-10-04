@@ -12,7 +12,7 @@ import aboutUs from "../assets/aboutUs.png";
 
 const MainPage = () => {
     return (
-        <div className="bg-slate-700 background">
+        <div className="bg-slate-800">
             <div className="w-screen h-screen flex flex-col items-center justify-center container mx-auto">
                 <div className="flex flex-col md:flex-row items-center justify-center md:items-start p-4 md:p-8">
                     <div className="text-center md:text-left md:w-1/2 flex flex-col items-center md:items-start mt-16">
@@ -23,7 +23,7 @@ const MainPage = () => {
                                         odkrywaj fascynujące światy i dowiedz się,<br/>
                                         jak mogą wyglądać egzoplanety poza naszym Układem Słonecznym.<br/>
                                         <Link to="/Exoplanets"
-                                              className="text-center bg-blue-600 text-white shadow p-2 md:p-3 rounded hover:bg-blue-700 transition inline-flex items-center mt-4 md:mt-6">
+                                              className="text-center bg-blue-600 text-white shadow p-2 md:p-3 rounded hover:bg-blue-700 active:bg-blue-800 transition inline-flex items-center mt-4 md:mt-6">
                                         Poznaj egzoplanety
                                         <Icon.ArrowRight size={20} color="white" className="ml-2"/>
                                         </Link>
@@ -48,7 +48,7 @@ const MainPage = () => {
                                         Chcemy zainspirować ludzi do odkrywania tajemnic wszechświata,<br/>
                                         przeglądania fascynujących światów krążących wokół innych gwiazd oraz dzielenia się najnowszymi odkryciami naukowymi.<br/>
                                         <Link to="/AboutUs"
-                                              className="text-center bg-blue-600 text-white shadow p-2 md:p-3 rounded hover:bg-blue-700 transition inline-flex items-center mt-4 md:mt-6">
+                                              className="text-center bg-blue-600 text-white shadow p-2 md:p-3 rounded hover:bg-blue-700 active:bg-blue-800 transition inline-flex items-center mt-4 md:mt-6">
                                         Poznaj nasz team
                                         <Icon.ArrowRight size={20} color="white" className="ml-2"/>
                                         </Link>
