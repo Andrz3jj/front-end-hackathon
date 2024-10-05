@@ -1,34 +1,58 @@
-import React from 'react';
-import Particles from './ui/particles';
+import "../App.css";
+import * as Icon from 'react-bootstrap-icons';
+import { Link } from "react-router-dom";
+import exoplanet from "../assets/exoplanet.png";
+import aboutUs from "../assets/LogoofPPM.png";
 
-const color = "#ffffff";
-const WelcomePage: React.FC = () => {
+const MainPage = () => {
     return (
-        <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-slate-800 to-black">
-            
-            <Particles 
-                className="absolute inset-0"
-                quantity={500}
-                ease={100}
-                color={color}
-                refresh
-            />
-           
-            <div className="relative z-10 flex flex-col items-center text-center space-y-6">
-                <h1 className="bg-gradient-to-r from-pink-500 to-indigo-500 bg-clip-text text-transparent text-6xl md:text-8xl font-extrabold tracking-tight">
-                    ExoSearch
-                </h1>
-                <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
-                   Seacrh for your favorite ExoPlanets
-                </p>
-                <button className="px-6 py-3 mt-4 bg-pink-600 text-white rounded-full text-lg font-medium transition-transform transform hover:scale-105">
-                    Explore Now
-                </button>
+        <div className="bg-gradient-to-t from-slate-900 to-gray-800 min-h-screen">
+            <div className="w-full h-full flex flex-col items-center justify-center container mx-auto p-4 md:p-8 space-y-16">
+                
+                <div className="flex flex-col md:flex-row items-center justify-between w-full shadow-lg bg-slate-700 rounded-lg p-6">
+                    <div className="text-center md:text-left md:w-1/2 flex flex-col items-center md:items-start px-4">
+                        <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-snug text-center">
+                            Odkrywaj Nowe Światy!
+                        </span>
+                        <p className="text-gray-300 text-sm sm:text-md md:text-lg mt-4 leading-relaxed  text-center ">
+                            Przeglądaj tysiące planet krążących wokół innych gwiazd,
+                            odkrywaj fascynujące światy i dowiedz się,<br/>
+                            jak mogą wyglądać egzoplanety poza naszym Układem Słonecznym.
+                        </p>
+                        <Link to="/Exoplanets"
+                              className="text-center text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition duration-300 ease-in-out shadow-lg p-2 md:p-3 rounded inline-flex items-center mt-4 md:mt-6">
+                            Poznaj egzoplanety
+                            <Icon.ArrowRight size={20} color="white" className="ml-2"/>
+                        </Link>
+                    </div>
+                    <div className="flex justify-center md:w-1/2 mt-8 md:mt-0">
+                        <img src={exoplanet} alt="egzoplaneta" className="w-40 sm:w-48 md:w-64 rounded "/>
+                    </div>
+                </div>
+
+                <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full shadow-lg bg-slate-700 rounded-lg p-6">
+                    <div className="flex justify-center md:w-1/2 mt-8 md:mt-0">
+                        <img src={aboutUs} alt="aboutUs" className="w-40 sm:w-48 md:w-64 rounded "/>
+                    </div>
+                    <div className="text-center md:text-left md:w-1/2 flex flex-col items-center md:items-start px-4">
+                        <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-snug ml-18 text-center justify-center">
+                            Prawy Przycisk Myszy
+                        </span>
+                        <p className="text-gray-300 text-sm sm:text-md md:text-lg mt-4 leading-relaxed text-center">
+                            Cześć, jesteśmy grupą pasjonatów technologii.<br/>
+                            Naszym celem jest stworzenie innowacyjnej strony internetowej poświęconej egzoplanetom.<br/>
+                            Chcemy zainspirować ludzi do odkrywania tajemnic wszechświata oraz dzielenia się najnowszymi odkryciami naukowymi.
+                        </p>
+                        <Link to="/AboutUs"
+                              className="text-center text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition duration-300 ease-in-out shadow-lg p-2 md:p-3 rounded inline-flex items-center mt-4 md:mt-6">
+                            Poznaj nasz team
+                            <Icon.ArrowRight size={20} color="white" className="ml-2"/>
+                        </Link>
+                    </div>
+                </div>
             </div>
-            {/* Subtle overlay effect */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-50"></div>
         </div>
-    );
+    )
 };
 
-export default WelcomePage;
+export default MainPage;

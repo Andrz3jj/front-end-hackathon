@@ -9,95 +9,97 @@ import githubLogo from "../assets/githubLogo.svg";
 const AboutUs = () => {
     return (
         <>
-            <div className="bg-slate-800 text-white min-h-screen">
-               <div className="flex items-center justify-center h-full p-4 md:p-16 container">
-                    <div className="text-lg text-center">
-                        <div>
-                            <span className="font-bold">Prawy Przycisk Myszy</span> to zespół kreatywnych i pasjonatów technologii programistów, 
-                            którzy postanowili połączyć swoje umiejętności, 
-                            by stworzyć innowacyjną stronę edukacyjną o egzoplanetach. 
-                            Naszym celem jest zbliżenie użytkowników do fascynującego świata 
-                            planet znajdujących się poza Układem Słonecznym, 
-                            w sposób przystępny zarówno dla laików, jak i dla pasjonatów astronomii.
+            <div className="bg-slate-800 text-white min-h-screen w-full">
+                <div className="flex items-center justify-center h-full p-4 md:p-8 lg:p-16 container mx-auto max-w-7xl">
+                    <div className="text-base sm:text-lg w-full">
+                        <div className="max-w-4xl mx-auto">
+                            <span className="font-bold text-xl sm:text-2xl block mb-4 text-center justify">Prawy Przycisk Myszy</span>
+                            <p className="text-sm sm:text-base lg:text-lg text-center justify">
+                                to zespół kreatywnych i pasjonatów technologii programistów, 
+                                którzy postanowili połączyć swoje umiejętności, 
+                                by stworzyć innowacyjną stronę edukacyjną o egzoplanetach. 
+                                Naszym celem jest zbliżenie użytkowników do fascynującego świata 
+                                planet znajdujących się poza Układem Słonecznym, 
+                                w sposób przystępny zarówno dla laików, jak i dla pasjonatów astronomii.
+                            </p>
                         </div>
-                        <div className="text-lg text-center pt-8 md:pt-16">
-                            Nasz zespół składa się z programistów z różnych dziedzin, w tym:<br/><br/>
-                            <ul>
-                                <li>Front-end developers:<br/><br/>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-                                    <div className="bg-slate-700 border border-slate-600 rounded flex items-center">
-                                        <img src={Andrzej} className="w-20 md:w-28 m-4 rounded-lg" />
-                                        <div className="ml-4 text-white flex flex-col items-center"> 
-                                             <span className="text-center">Andrzej Bajcarczyk</span> 
-                                            <a href="https://github.com/Andrz3jj" 
-                                            className="flex items-center justify-center bg-white text-black rounded mt-2 hover:bg-gray-200 transition px-2 py-1 w-24">
-                                                <img src={githubLogo} alt="Github logo" className="w-5 h-5 mr-2" />
-                                                Github
-                                            </a>
+                        <div className="text-base sm:text-lg pt-8 md:pt-12 lg:pt-16">
+                            <p className="mb-8 justify text-center">Nasz zespół składa się z programistów z różnych dziedzin:</p>
+                            <ul className="list-disc list-inside space-y-8">
+                                
+                                    <p className="mb-6 text-center ">Front-end developers:</p>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        <div className="bg-slate-700 border border-slate-600 rounded flex flex-col sm:flex-row items-center p-4">
+                                            <img src={Andrzej} className="w-16 sm:w-20 md:w-24 lg:w-28 rounded-lg" alt="Andrzej Bajcarczyk" />
+                                            <div className="mt-4 sm:mt-0 sm:ml-4 flex flex-col items-center sm:items-start"> 
+                                                <span className="text-center sm:text-left mb-2">Andrzej Bajcarczyk</span> 
+                                                <a href="https://github.com/Andrz3jj" 
+                                                    className="flex items-center justify-center bg-white text-black rounded hover:bg-gray-200 transition px-2 py-1 w-24">
+                                                    <img src={githubLogo} alt="Github logo" className="w-4 h-4 mr-2" />
+                                                    Github
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-slate-700 border border-slate-600 rounded flex flex-col sm:flex-row items-center p-4"> 
+                                            <img src={Janek} className="w-16 sm:w-20 md:w-24 lg:w-28 rounded-lg" alt="Jan Florek" />
+                                            <div className="mt-4 sm:mt-0 sm:ml-4 flex flex-col items-center sm:items-start"> 
+                                                <span className="text-center sm:text-left mb-2">Jan Florek</span> 
+                                                <a href="https://github.com/WavyWare" 
+                                                    className="flex items-center justify-center bg-white text-black rounded hover:bg-gray-200 transition px-2 py-1 w-24">
+                                                    <img src={githubLogo} alt="Github logo" className="w-4 h-4 mr-2" />
+                                                    Github
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-slate-700 border border-slate-600 rounded flex flex-col sm:flex-row items-center p-4">
+                                            <img src={Tomek} className="w-16 sm:w-20 md:w-24 lg:w-28 rounded-lg" alt="Tomasz Tłusty" />
+                                            <div className="mt-4 sm:mt-0 sm:ml-4 flex flex-col items-center sm:items-start"> 
+                                                <span className="text-center sm:text-left mb-2">Tomasz Tłusty</span> 
+                                                <a href="https://github.com/FarciarzYT" 
+                                                    className="flex items-center justify-center bg-white text-black rounded hover:bg-gray-200 transition px-2 py-1 w-24">
+                                                    <img src={githubLogo} alt="Github logo" className="w-4 h-4 mr-2" />
+                                                    Github
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
+                                
 
-                                    <div className="bg-slate-700 border border-slate-600 rounded flex items-center"> 
-                                        <img src={Janek} className="w-20 md:w-28 m-4 rounded-lg" />
-                                        <div className="ml-4 text-white flex flex-col items-center"> 
-                                            <span className="text-center">Jan Florek</span> 
-                                            <a href="https://github.com/WavyWare" 
-                                            className="flex items-center justify-center bg-white text-black rounded mt-2 hover:bg-gray-200 transition px-2 py-1 w-24">
-                                                <img src={githubLogo} alt="Github logo" className="w-5 h-5 mr-2" />
-                                                Github
-                                            </a>
+                                
+                                    <p className="mb-6 text-center">Back-end developers:</p>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div className="bg-slate-700 border border-slate-600 rounded flex flex-col sm:flex-row items-center p-4">
+                                            <img src={Kamil} className="w-16 sm:w-20 md:w-24 lg:w-28 rounded-lg" alt="Kamil Konieczny" />
+                                            <div className="mt-4 sm:mt-0 sm:ml-4 flex flex-col items-center sm:items-start">
+                                                <span className="text-center sm:text-left mb-2">Kamil Konieczny</span>
+                                                <a href="https://github.com/kamelkali" 
+                                                    className="flex items-center justify-center bg-white text-black rounded hover:bg-gray-200 transition px-2 py-1 w-24">
+                                                    <img src={githubLogo} alt="Github logo" className="w-4 h-4 mr-2" />
+                                                    Github
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-slate-700 border border-slate-600 rounded flex flex-col sm:flex-row items-center p-4">
+                                            <img src={Kacper} className="w-16 sm:w-20 md:w-24 lg:w-28 rounded-lg" alt="Kacper Zbyrad" />
+                                            <div className="mt-4 sm:mt-0 sm:ml-4 flex flex-col items-center sm:items-start">
+                                                <span className="text-center sm:text-left mb-2">Kacper Zbyrad</span>
+                                                <a href="https://github.com/KacZbyDev" 
+                                                    className="flex items-center justify-center bg-white text-black rounded hover:bg-gray-200 transition px-2 py-1 w-24">
+                                                    <img src={githubLogo} alt="Github logo" className="w-4 h-4 mr-2" />
+                                                    Github
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <div className="bg-slate-700 border border-slate-600 rounded flex items-center">
-                                        <img src={Tomek} className="w-20 md:w-28 m-4 rounded-lg" />
-                                        <div className="ml-4 text-white flex flex-col items-center"> 
-                                            <span className="text-center">Tomasz Tłusty</span> 
-                                            <a href="https://github.com/FarciarzYT" 
-                                            className="flex items-center justify-center bg-white text-black rounded mt-2 hover:bg-gray-200 transition px-2 py-1 w-24">
-                                                <img src={githubLogo} alt="Github logo" className="w-5 h-5 mr-2" />
-                                                Github
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                </li><br/>
-                                <li>Back-end developers:</li><br/>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div className="bg-slate-700 border border-slate-600 rounded flex items-center w-80 max-w-md mx-auto">
-                                        <img src={Kamil} className="w-20 md:w-28 m-4 rounded-lg" />
-                                        <div className="ml-4 text-white flex flex-col items-center">
-                                            <span className="text-center">Kamil Konieczny</span>
-                                            <a href="https://github.com/kamelkali" 
-                                                className="flex items-center justify-center bg-white text-black rounded mt-2 hover:bg-gray-200 transition px-2 py-1">
-                                                <img src={githubLogo} alt="Github logo" className="w-5 h-5 mr-2" />
-                                                Github
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div className="bg-slate-700 border border-slate-600 rounded flex items-center w-80 w-72 mx-auto">
-                                        <img src={Kacper} className="w-20 md:w-28 m-4 rounded-lg" />
-                                        <div className="ml-4 text-white flex flex-col items-center">
-                                            <span className="text-center">Kacper Zbyrad</span>
-                                            <a href="https://github.com/KacZbyDev" 
-                                                className="flex items-center justify-center bg-white text-black rounded mt-2 hover:bg-gray-200 transition px-2 py-1">
-                                                <img src={githubLogo} alt="Github logo" className="w-5 h-5 mr-2" />
-                                                Github  
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    </div>
+                                
                             </ul>
                         </div>    
                     </div>
-                    
-               </div>
+                </div>
             </div>
         </>
     );
