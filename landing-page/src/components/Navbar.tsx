@@ -76,13 +76,8 @@ const Navbar = () => {
                             </svg>
                         </button>
                         {isDropdownOpen && (
-<<<<<<< HEAD
-                            <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50">
-                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/forum">
-=======
                             <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50 transition-all transform scale-y-100 opacity-100 origin-top duration-300">
-                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/forum">
->>>>>>> navbar
+                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded border-b border-slate-600" to="/forum">
                                     Forum
                                 </Link>
                                 <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Challenges">
@@ -106,13 +101,8 @@ const Navbar = () => {
                             </svg>
                         </button>
                         {isInfoDropdownOpen && (
-<<<<<<< HEAD
-                            <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50">
-                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/aboutUs">
-=======
                             <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50 transition-all transform scale-y-100 opacity-100 origin-top duration-300">
-                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/aboutUs">
->>>>>>> navbar
+                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded border-b border-slate-600" to="/aboutUs">
                                     O nas
                                 </Link>
                                 <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Contact">
