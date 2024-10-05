@@ -1,9 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";  // Import Link from react-router-dom
 import "../App.css";
-import Navbar from "./Navbar.tsx";
 
-const loginPage = () => {
+const LoginPage = () => {
     return (
         <>
             <div className="bg-slate-800 text-white min-h-screen">
@@ -41,4 +39,4 @@ const loginPage = () => {
     );
 };
 
-export default loginPage;
+export default LoginPage;
