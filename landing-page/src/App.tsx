@@ -1,4 +1,4 @@
-import "./App.css";
+
 import "./BackGround.css"
 import Navbar from "./components/Navbar.jsx";
 import Exoplanets from "./components/Exoplanets";

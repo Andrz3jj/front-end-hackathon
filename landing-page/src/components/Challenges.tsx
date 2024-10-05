@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Trophy, Sword, Brain } from 'lucide-react';
-
+import Ranking from './Table.tsx';
 const Challenges = () => {
     const [selectedQuest, setSelectedQuest] = useState<number | null>(null); // Make sure to define the state type explicitly as number | null.
 
@@ -91,6 +91,10 @@ const Challenges = () => {
                         </button>
                     </div>
                 )}
+
+                <div>
+                    <Ranking/>
+                </div>
             </div>
         </div>
     );

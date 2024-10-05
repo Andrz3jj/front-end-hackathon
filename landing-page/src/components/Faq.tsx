@@ -40,6 +40,11 @@ const Faq = () => {
       question: "Czy oferujecie wsparcie techniczne?",
       answer: "Tak, oferujemy pełne wsparcie techniczne dla naszych Urztknowników 24/7."
     },
+    {
+      question: "Dlaczego Powinienem Korzystać akurat z ExoSearch?",
+      answer: "Ponieważ jesteśmy jedyną pratformą edukacyjną która uczy o egzoplanetach i za punkty exp możecie zdobywać nagrody w postaci rang i przywileji na stronie które w przysłości przełożą się na dodatki na wysokich uczelniach wspieranych przez Nasa!"
+
+    }
     
   ];
 

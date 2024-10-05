@@ -60,7 +60,7 @@ const Navbar = () => {
 
             {/* Navbar Container */}
             <div className="fixed top-0 left-0 right-0 z-[100]">
-                <nav className={` bg-slate-900  text-white transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+                <nav className={` bg-slate-900 text-white transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
                     <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4 md:px-12">
                         <div className="flex items-center mb-4 md:mb-0">
                             <img src={logo} className="w-12 mr-2" alt="ExoSky Logo" />
@@ -132,7 +132,7 @@ const Navbar = () => {
                                 )}
                             </div>
 
-                            <Link className="text-2xl m-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-center rounded p-2 transition " to="/loginPage">
+                            <Link className="text-2xl m-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-center rounded p-2 transition active:shadow-xl" to="/loginPage">
                                 Zaloguj się
                             </Link>
                         </div>
