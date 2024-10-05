@@ -1,10 +1,8 @@
-import React from "react";
 import "../App.css";
 // import Navbar from "./components/Navbar.jsx";
 // import Exoplanets from "./components/Exoplanets";
 // import Forum from "./components/Forum";
 // import AboutUs from "./components/AboutUs";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import * as Icon from 'react-bootstrap-icons';
 import { Link } from "react-router-dom";
 import exoplanet from "../assets/exoplanet.png";

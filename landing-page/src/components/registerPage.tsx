@@ -1,6 +1,4 @@
-import React from "react";
 import "../App.css";
-import Navbar from "./Navbar.tsx";
 import {Link} from "react-router-dom";
 
 const registerPage = () => {

@@ -1,6 +1,4 @@
-import React from "react";
 import "../App.css";
-import Navbar from "./Navbar.tsx";
 import * as Icon from 'react-bootstrap-icons';
 
 const Exoplanets = () => {
