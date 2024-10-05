@@ -6,6 +6,7 @@ import Forum from "./components/Forum";
 import AboutUs from "./components/AboutUs";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/registerPage";
+import WelcomePage from "./components/WelcomePage";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
             <Navbar />
 
             <Routes>
+                <Route path="/WelcomePage" element={<WelcomePage />} />
                 <Route path="/" element={<MainPage />} />
                 <Route path="/Exoplanets" element={<Exoplanets/>}/>
                 <Route path="/Forum" element={<Forum/>}/>

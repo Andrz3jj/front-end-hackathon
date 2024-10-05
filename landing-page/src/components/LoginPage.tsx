@@ -26,11 +26,13 @@ const LoginPage = () => {
                     Nie masz konta? Załóż je
                     <Link className="text-blue-600 ml-1 hover:text-blue-700 transition" to="/registerPage">tutaj!</Link>
                 </span>
-                            <input
+                <button
                                 type="submit"
-                                value="Zaloguj się"
                                 className="mt-4 bg-blue-600 rounded p-4 w-full hover:bg-blue-700 transition focus:bg-blue-800"
-                            />
+                                
+                            >
+                                <Link className="text-2xl font-semibold" to="/WelcomePage">Zaloguj Się</Link>
+                            </button>
                         </form>
                     </div>
                 </div>
