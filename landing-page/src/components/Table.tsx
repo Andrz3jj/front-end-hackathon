@@ -21,11 +21,11 @@ const RankingPage: React.FC = () => {
                     Ranking Użytkowników
                 </h1>
                 <table className="table-auto w-full bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                    <thead className="bg-gray-700">
+                    <thead className="bg-gray-700 text-center justify">
                     <tr>
-                        <th className="px-4 py-2 text-left text-lg text-pink-500">Miejsce</th>
-                        <th className="px-4 py-2 text-left text-lg text-pink-500">Nazwa Użytkownika</th>
-                        <th className="px-4 py-2 text-left text-lg text-pink-500">Punkty XP</th>
+                        <th className="px-4 py-2 text-center text-lg text-pink-500">Miejsce</th>
+                        <th className="px-4 py-2 text-center text-lg text-pink-500">Nazwa Użytkownika</th>
+                        <th className="px-4 py-2 text-center text-lg text-pink-500">Punkty XP</th>
                     </tr>
                     </thead>
                     <tbody>
