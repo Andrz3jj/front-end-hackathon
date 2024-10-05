@@ -1,40 +1,46 @@
+import React, { useState } from "react";
 import "../App.css";
-import RecentPostComponent from "./RecentPostComponent.tsx";
-import React from "react";
+import RecentPostComponent from "./RecentPostComponent";
+import PostComponent from "./PostComponent";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Forum: React.FC = () => {
-        return (
-            <>
-                <div>
-                    <div className="bg-slate-800 h-screen text-white">
-                        <div className="container md:mx-auto" >
-                            <div className="text-center p-12 flex justify-center">
-                                <span className="text-6xl  font-mono">AskExo</span>
-                                <div className="relative flex items-center">
-                                    <input type="text"
-                                           className="w-full transition-all outline-none border-b border-b-slate-600 p-2 pr-10 text-purple-300 bg-transparent focus:border-b-purple-500 hover:border-b-purple-700"/>
-                                    <button className="p-3 rounded-full hover:text-purple-700 hover:text-lg transition-all cursor-pointer focus:text-purple-300 right-10 top-1/2 transform -translate-y-1/2">
-                                        <i className="bi bi-search absolute"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className="flex">
-                                <div className="md:basis-1/3 p-5 m-5 rounded-2xl bg-slate-900 font-mono sticky      ">
-                                    <span className="text-  3xl font-bold tracking-widest text-center w-full">Recent Questions</span>
-                                    <RecentPostComponent/>
-                                </div>
-                                <div className="md:basis-2/3 p-5 m-5 rounded-2xl bg-slate-900 font-mono">
+    const [searchQuery, setSearchQuery] = useState("");
 
-                                </div>
-                                <div className="md:basis-2/3 p-5 m-5 rounded-2xl bg-slate-900 font-mono">
+    const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(e.target.value);
+    };
 
-                                </div>
-                            </div>
-                        </div>
+    return (
+        <div className="bg-slate-800 min-h-screen text-white">
+            <div className="container mx-auto px-4">
+                <header className="text-center py-12">
+                    <h1 className="text-6xl font-mono">AskExo</h1>
+                    <div className="relative flex items-center justify-center mt-6">
+                        <input
+                            type="text"
+                            value={searchQuery}
+                            onChange={handleSearchChange}
+                            className="w-full max-w-md px-4 py-2 border-b border-slate-600 text-purple-300 bg-transparent focus:border-purple-500 hover:border-purple-700 transition-colors outline-none"
+                            placeholder="Search..."
+                        />
+                        <button className="p-3 rounded-full hover:text-purple-700 transition-all cursor-pointer focus:text-purple-300">
+                            <i className="bi bi-search"></i>
+                        </button>
                     </div>
-                </div>
-            </>
-        );
+                </header>
+
+                <main className="flex flex-col lg:flex-row">
+                    <div className="w-full lg:w-2/3 lg:order-1 order-2">
+                        <PostComponent searchQuery={searchQuery} />
+                    </div>
+                    <aside className="w-full lg:w-1/3 lg:pl-8">
+                        <RecentPostComponent />
+                    </aside>
+                </main>
+            </div>
+        </div>
+    );
 };
 
 export default Forum;
