@@ -40,7 +40,7 @@ const Faq = () => {
       question: "Czy oferujecie wsparcie techniczne?",
       answer: "Tak, oferujemy pełne wsparcie techniczne dla naszych Urztknowników 24/7."
     },
-    // Tutaj możesz dodać więcej pytań i odpowiedzi
+    
   ];
 
   return (

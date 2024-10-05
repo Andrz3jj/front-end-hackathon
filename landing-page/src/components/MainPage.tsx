@@ -1,6 +1,6 @@
 import React from 'react';
 import Particles from './ui/particles';
-
+import {Link} from 'react-router-dom';
 const color = "#ffffff";
 const WelcomePage: React.FC = () => {
     return (
@@ -19,11 +19,11 @@ const WelcomePage: React.FC = () => {
                     ExoSearch
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
-                   Wyszukaj Swoje Ulubione Egzoplanety
+                   Znajdź swoją wymarzoną planetę! I Konkuruj z innymi użytkownikami o miejsce w Rankingu Mistrzów!
                 </p>
-                <button className="px-6 py-3 mt-4 bg-pink-600 text-white rounded-full text-lg font-medium transition-transform transform hover:scale-105">
+                <Link className="px-6 py-3 mt-4 bg-pink-600 text-white rounded-full text-lg font-medium transition-transform transform hover:scale-105 " to="/LoginPage">
                     Exploruj Teraz
-                </button>
+                </Link>
                 
             </div>
             
