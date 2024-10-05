@@ -1,119 +1,36 @@
-import "../App.css";
-import * as Icon from 'react-bootstrap-icons';
-import { Link } from "react-router-dom";
-import exoplanet from "../assets/exoplanet.png";
-import aboutUs from "../assets/LogoofPPM.png";
- 
+import React from 'react';
+import Particles from './ui/particles';
+import {Link} from 'react-router-dom';
 
-const TopSection = () => {
-  return (
-    <div className="w-full bg-slate-850 p-4 text-slate-200">
-      
-      
-      <div className="text-center mb-6">
-        <p>Witaj, user!</p>
-      </div>
+const color = "#ffffff";
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div className="border-2 border-slate-600 bg-slate-700 rounded-lg p-4 min-h-[200px] hover:bg-slate-600 transition-colors">
-          <h3 className="font-semibold mb-2 text-slate-200">Ostatnia aktywność na forum:</h3>
-          {/* Tutaj możesz dodać komponenty dla aktywności na forum */}
-          <div className="space-y-2">
-            <div className="text-sm text-slate-300">Brak aktywności</div>
-          </div>
-        </div>
-
-        <div className="border-2 border-slate-600 bg-slate-700 rounded-lg p-4 min-h-[200px] hover:bg-slate-600 transition-colors">
-          <h3 className="font-semibold mb-2 text-slate-200">Najlepsze teamy</h3>
-          {/* Tutaj możesz dodać komponenty dla najlepszych teamów */}
-          <div className="space-y-2">
-            <div className="text-sm text-slate-300">Brak teamów</div>
-          </div>
-        </div>
-
-        <div className="border-2 border-slate-600 bg-slate-700 rounded-lg p-4 min-h-[200px] hover:bg-slate-600 transition-colors">
-          <h3 className="font-semibold mb-2 text-slate-200">Ostatnie bitwy teamowe:</h3>
-          {/* Tutaj możesz dodać komponenty dla bitw teamowych */}
-          <div className="space-y-2">
-            <div className="text-sm text-slate-300">Brak bitw</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row justify-between items-center mb-4 text-slate-300">
-       
-
-        
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Link 
-          to="/last-lesson" 
-          className="border-2 border-slate-600 bg-slate-700 p-2 text-center rounded-lg hover:bg-slate-600 transition-colors"
-        >
-          Ostatnia lekcja →
-        </Link>
-        <Link 
-          to="/your-team" 
-          className="border-2 border-slate-600 bg-slate-700 p-2 text-center rounded-lg hover:bg-slate-600 transition-colors"
-        >
-          Twój team
-        </Link>
-      </div>
-    </div>
-  );
-};
-
-const MainPage = () => {
+const WelcomePage: React.FC = () => {
     return (
-        <div className="bg-gradient-to-t from-slate-900 to-gray-800 min-h-screen">
-            <TopSection />
-            <div className="w-full h-full flex flex-col items-center justify-center container mx-auto p-4 md:p-8 space-y-16">
-                {/* Reszta kodu pozostaje bez zmian */}
-                <div className="flex flex-col md:flex-row items-center justify-between w-full shadow-lg bg-slate-700 rounded-lg p-6">
-                    <div className="text-center md:text-left md:w-1/2 flex flex-col items-center md:items-start px-4">
-                        <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-snug text-center">
-                            Odkrywaj Nowe Światy!
-                        </span>
-                        <p className="text-gray-300 text-sm sm:text-md md:text-lg mt-4 leading-relaxed  text-center ">
-                            Przeglądaj tysiące planet krążących wokół innych gwiazd,
-                            odkrywaj fascynujące światy i dowiedz się,<br/>
-                            jak mogą wyglądać egzoplanety poza naszym Układem Słonecznym.
-                        </p>
-                        <Link to="/Exoplanets"
-                              className="text-center text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition duration-300 ease-in-out shadow-lg p-2 md:p-3 rounded inline-flex items-center mt-4 md:mt-6">
-                            Poznaj egzoplanety
-                            <Icon.ArrowRight size={20} color="white" className="ml-2"/>
-                        </Link>
-                    </div>
-                    <div className="flex justify-center md:w-1/2 mt-8 md:mt-0">
-                        <img src={exoplanet} alt="egzoplaneta" className="w-40 sm:w-48 md:w-64 rounded "/>
-                    </div>
-                </div>
-
-                <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full shadow-lg bg-slate-700 rounded-lg p-6">
-                    <div className="flex justify-center md:w-1/2 mt-8 md:mt-0">
-                        <img src={aboutUs} alt="aboutUs" className="w-40 sm:w-48 md:w-64 rounded "/>
-                    </div>
-                    <div className="text-center md:text-left md:w-1/2 flex flex-col items-center md:items-start px-4">
-                        <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-snug ml-18 text-center justify-center">
-                            Prawy Przycisk Myszy
-                        </span>
-                        <p className="text-gray-300 text-sm sm:text-md md:text-lg mt-4 leading-relaxed text-center">
-                            Cześć, jesteśmy grupą pasjonatów technologii.<br/>
-                            Naszym celem jest stworzenie innowacyjnej strony internetowej poświęconej egzoplanetom.<br/>
-                            Chcemy zainspirować ludzi do odkrywania tajemnic wszechświata oraz dzielenia się najnowszymi odkryciami naukowymi.
-                        </p>
-                        <Link to="/AboutUs"
-                              className="text-center text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition duration-300 ease-in-out shadow-lg p-2 md:p-3 rounded inline-flex items-center mt-4 md:mt-6">
-                            Poznaj nasz team
-                            <Icon.ArrowRight size={20} color="white" className="ml-2"/>
-                        </Link>
-                    </div>
-                </div>
+        <main className="fixed inset-0 min-h-screen w-full bg-gradient-to-br from-gray-900 via-slate-800 to-black">
+            <div className="absolute inset-0 z-0">
+                <Particles 
+                    className="absolute inset-0"
+                    quantity={100}
+                    ease={100}
+                    color={color}
+                    refresh
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-50"></div>
             </div>
-        </div>
+           
+            <div className="relative z-10 h-full flex flex-col items-center justify-center text-center space-y-6 pt-[80px]">
+                <h1 className="bg-gradient-to-r from-pink-500 to-indigo-500 bg-clip-text text-transparent text-6xl md:text-8xl font-extrabold tracking-tight">
+                    ExoSearch
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 max-w-2xl px-4">
+                   Znajdź swoją wymarzoną planetę! I Konkuruj z innymi użytkownikami o miejsce w Rankingu Mistrzów!
+                </p>
+                <Link className="px-6 py-3 mt-4 bg-pink-600 text-white rounded-full text-lg font-medium transition-transform transform hover:scale-105" to="/LoginPage">
+                    Exploruj Teraz
+                </Link>
+            </div>
+        </main>
     );
 };
 
-export default MainPage;
+export default WelcomePage;

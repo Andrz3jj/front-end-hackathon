@@ -1,11 +1,12 @@
 import React from 'react';
 import Particles from './ui/particles';
 import {Link} from 'react-router-dom';
+
 const color = "#ffffff";
+
 const WelcomePage: React.FC = () => {
     return (
-        <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-slate-800 to-black">
-            
+        <div className="fixed inset-0 flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-slate-800 to-black">
             <Particles 
                 className="absolute inset-0"
                 quantity={100}
@@ -21,16 +22,13 @@ const WelcomePage: React.FC = () => {
                 <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
                    Znajdź swoją wymarzoną planetę! I Konkuruj z innymi użytkownikami o miejsce w Rankingu Mistrzów!
                 </p>
-                <Link className="px-6 py-3 mt-4 bg-pink-600 text-white rounded-full text-lg font-medium transition-transform transform hover:scale-105 " to="/LoginPage">
+                <Link className="px-6 py-3 mt-4 bg-pink-600 text-white rounded-full text-lg font-medium transition-transform transform hover:scale-105" to="/LoginPage">
                     Exploruj Teraz
                 </Link>
-                
             </div>
             
-        
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-50"></div>
         </div>
-        
     );
 };
 
