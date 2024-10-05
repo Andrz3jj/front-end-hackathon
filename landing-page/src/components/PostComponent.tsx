@@ -81,7 +81,7 @@ const PostComponent: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
             <div
                 className={`text-center mt-8 text-lg font-bold transition-opacity duration-1000 ${showGreeting ? 'opacity-100' : 'opacity-0'}`}
             >
-                This is the end.
+                To jest koniec.
             </div>
         </div>
     );

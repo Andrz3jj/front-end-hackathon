@@ -55,10 +55,8 @@ const Navbar = () => {
 
     return (
         <div>
-            {/* Spacer for fixed navbar */}
-            <div className="h-16 md:h-20"></div> {/* Adjust height based on navbar height */}
+            <div className="h-16 md:h-20"></div> 
 
-            {/* Navbar Container */}
             <div className="fixed top-0 left-0 right-0 z-[100]">
                 <nav className={` bg-slate-900 text-white transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
                     <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4 md:px-12">
@@ -87,7 +85,7 @@ const Navbar = () => {
                                     className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl focus:outline-none flex items-center"
                                     onClick={toggleDropdown}
                                 >
-                                    Community
+                                    Społeczność
                                     <svg className={`w-4 h-4 ml-2 transition-transform transform ${isDropdownOpen ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                                     </svg>
