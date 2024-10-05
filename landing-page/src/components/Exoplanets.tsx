@@ -10,7 +10,7 @@ const Exoplanets = () => {
                         <input
                             type="text"
                             placeholder="ExoSearch"
-                            className="bg-slate-600 shadow rounded placeholder-gray-400 text-black p-2 focus:outline-none focus:shadow-xl text-white transition w-full"
+                            className="bg-slate-600 shadow rounded placeholder-gray-400  p-2 focus:outline-none focus:shadow-xl text-white transition w-full"
                         />
                         <Icon.Keyboard
                             size={20}
