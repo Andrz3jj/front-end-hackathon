@@ -1,25 +1,98 @@
-import "../App.css";
+import { useState } from 'react';
+import { Trophy, Sword, Brain } from 'lucide-react';
 
 const Challenges = () => {
+    const [selectedQuest, setSelectedQuest] = useState<number | null>(null); // Make sure to define the state type explicitly as number | null.
+
+    const quests = [
+        {
+            id: 1,
+            title: "Daily Champion",
+            icon: <Trophy className="w-12 h-12 text-yellow-400" />,
+            description: "Wykonaj 2 Quizy z Wynikiem powyżej 90%",
+            reward: "50 XP",
+            difficulty: "Easy"
+        },
+        {
+            id: 2,
+            title: "Mind Master",
+            icon: <Brain className="w-12 h-12 text-purple-400" />,
+            description: "Udzielaj się na Forum przez 30 minut",
+            reward: "100 XP",
+            difficulty: "Medium"
+        },
+        {
+            id: 3,
+            title: "Ultimate Warrior",
+            icon: <Sword className="w-12 h-12 text-red-400" />,
+            description: "Pokonaj 1 drużynę w bitwie teamowej",
+            reward: "200 XP",
+            difficulty: "Hard"
+        }
+    ];
+
     return (
-        <>
-            <div className="bg-slate-800 text-white min-h-screen flex items-center justify-center">
-                <div className="text-center space-y-4">
-                    {/* Title with animation */}
-                    <h1 className="text-4xl md:text-6xl font-bold animate-fadeIn">Wyzwania dnia</h1>
-
-                    {/* Subheading or description */}
+        <div className="bg-slate-800 text-white min-h-screen rounded-xl">
+            <div className="container mx-auto px-4 py-16">
+                {/* Header Section */}
+                <div className="text-center space-y-4 mb-16">
+                    <h1 className="text-4xl md:text-6xl font-bold animate-pulse">
+                        Wyzwania dnia
+                    </h1>
                     <p className="text-lg md:text-2xl text-gray-400">
-                        Get ready for today's challenges!
+                        Wybierz Challenge i zdobądź nagrodę!
                     </p>
-
-                    {/* Cool animated button */}
-                    <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 transition-colors duration-300 ease-in-out rounded-md shadow-lg transform hover:scale-105 focus:outline-none">
-                        Start Now
-                    </button>
                 </div>
+
+                {/* Quests Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {quests.map((quest) => (
+                        <div
+                            key={quest.id}
+                            className={`
+                                bg-slate-700 border-2 transition-all duration-300 cursor-pointer
+                                transform hover:scale-105 hover:shadow-xl rounded p-6
+                                ${selectedQuest === quest.id ? 'border-blue-400 shadow-blue-400/50' : 'border-slate-600'}
+                            `}
+                            onClick={() => setSelectedQuest(quest.id)}
+                        >
+                            <div className="space-y-4 text-center">
+                                <div className="flex justify-center">
+                                    {quest.icon}
+                                </div>
+                                <h2 className="text-2xl font-bold">{quest.title}</h2>
+                            </div>
+                            <div className="space-y-4">
+                                <p className="text-gray-300">{quest.description}</p>
+                                <div className="flex justify-between items-center">
+                                    <span
+                                        className={`text-sm px-3 py-1 rounded-full ${
+                                            quest.difficulty === 'Easy' ? 'bg-green-700' :
+                                            quest.difficulty === 'Medium' ? 'bg-yellow-700' :
+                                            'bg-red-700'
+                                        }`}
+                                    >
+                                        {quest.difficulty}
+                                    </span>
+                                    <span className="text-yellow-400 font-bold">
+                                        {quest.reward}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Action Button */}
+                {selectedQuest && (
+                    <div className="text-center mt-12">
+                        <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50">
+                            Rozpocznij Wyzwanie
+                        </button>
+                    </div>
+                )}
             </div>
-        </>
+        </div>
     );
 };
 
