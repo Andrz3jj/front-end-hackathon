@@ -77,7 +77,7 @@ const Navbar = () => {
                                 <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/forum">
                                     Forum
                                 </Link>
-                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/events">
+                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Challenges">
                                     Wyzwania
                                 </Link>
                                 <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/exoplanets">
@@ -99,7 +99,7 @@ const Navbar = () => {
                                 <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/aboutUs">
                                     O nas
                                 </Link>
-                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/kontakt">
+                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Contact">
                                     Kontakt
                                 </Link>
                                 <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/faq">

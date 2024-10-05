@@ -7,6 +7,9 @@ import AboutUs from "./components/AboutUs";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/registerPage";
 import WelcomePage from "./components/WelcomePage";
+import Challenges from "./components/Challenges";
+import Contact from "./components/Contact";
+import Faq from "./components/Faq";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
@@ -22,6 +25,9 @@ const App = () => {
                 <Route path="/AboutUs" element={<AboutUs/>}/>
                 <Route path="/loginPage" element={<LoginPage/>}/>
                 <Route path="/registerPage" element={<RegisterPage/>} />
+                <Route path="/Challenges" element={<Challenges/>} />
+                <Route path="/Contact" element={<Contact/>} />
+                <Route path="/Faq" element={<Faq/>} />
             </Routes>
         </Router>
     );
