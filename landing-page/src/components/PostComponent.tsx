@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import questionsData from './../questions.json';
 import PostItem from './PostItem'; // Import nowego komponentu
-import { AnimatedSubscribeButton } from "@/components/ui/animated-subscribe-button.tsx";
 
 interface Post {
     id: number;

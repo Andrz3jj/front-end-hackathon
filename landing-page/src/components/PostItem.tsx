@@ -39,6 +39,7 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
         }
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const handleDownVote = () => {
         if (isDownVoted) {
             // Jeśli użytkownik już downvotował, odwołaj downvote
@@ -72,7 +73,6 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
                             subscribeStatus={isUpVoted}
                             initialText={<i className="bi bi-caret-up"></i>}
                             changeText={<i className="bi bi-caret-up-fill"></i>}
-                            onClick={handleUpVote}
                         />
                     </div>
 
@@ -90,7 +90,6 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
                             subscribeStatus={isDownVoted}
                             initialText={<i className="bi bi-caret-down"></i>}
                             changeText={<i className="bi bi-caret-down-fill"></i>}
-                            onClick={handleDownVote}
                         />
                     </div>
                 </div>
