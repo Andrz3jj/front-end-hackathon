@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "../App.css";
 import { Search, Planet, Star, ThermometerHalf, Rulers, Calendar } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -30,30 +31,30 @@ const examplePlanets = [
 ];
 
 const ExoplanetCard = ({ planet }) => (
-  <div className="bg-slate-700 hover:bg-slate-600 transition-colors duration-200">
+  <div className="bg-slate-700 border border-slate-600 rounded hover:bg-slate-600 transition-colors duration-200">
     <div className="p-6">
       <div className="flex justify-between items-start">
         <div>
-          <h3 className="text-xl font-bold text-white mb-2">{planet.name}</h3>
+          <h3 className="text-xl text-white mb-2"><span className="font-bold">Nazwa egzoplanety:</span> {planet.name}</h3>
           <div className="flex items-center text-gray-300 text-sm mb-1">
             <div className="w-4 h-4 mr-2" />
             <span>{planet.star}</span>
           </div>
           <div className="flex items-center text-gray-300 text-sm mb-1">
             <div className="w-4 h-4 mr-2" />
-            <span>{planet.type}</span>
+            <span><span className="font-bold">Typ: </span>{planet.type}</span>
           </div>
           <div className="flex items-center text-gray-300 text-sm mb-1">
             <div className="w-4 h-4 mr-2" />
-            <span>{planet.temperature}</span>
+            <span><span className="font-bold">Temperatura:</span> {planet.temperature}</span>
           </div>
           <div className="flex items-center text-gray-300 text-sm mb-1">
             <div className="w-4 h-4 mr-2" />
-            <span>{planet.distance}</span>
+            <span><span className="font-bold">Dystans od ziemi:</span> {planet.distance}</span>
           </div>
           <div className="flex items-center text-gray-300 text-sm">
             <div className="w-4 h-4 mr-2" />
-            <span>Discovered: {planet.discovered}</span>
+            <span><span className="font-bold">Kiedy odkryto:</span> {planet.discovered}</span>
           </div>
         </div>
       </div>
