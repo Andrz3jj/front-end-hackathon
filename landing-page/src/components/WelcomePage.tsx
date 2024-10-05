@@ -1,4 +1,5 @@
 import React from 'react';
+import Roadmap from "./RoadMap.tsx"
 
 const Dashboard = () => {
     return (
@@ -37,7 +38,10 @@ const Dashboard = () => {
                 <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                     <button className="bg-slate-700 hover:bg-slate-600 transition-colors duration-200 text-white p-4 w-full rounded-lg shadow-lg">Ostatnia lekcja </button>
                     <button className="bg-slate-700 hover:bg-slate-600 transition-colors duration-200 text-white p-4 w-full rounded-lg shadow-lg">Twój team</button>
-                </div>
+                </div><br/>
+        
+                <Roadmap/>
+
             </div>
         </div>
     );
