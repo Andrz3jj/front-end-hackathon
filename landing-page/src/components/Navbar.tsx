@@ -74,13 +74,13 @@ const Navbar = () => {
                         </button>
                         {isDropdownOpen && (
                             <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50">
-                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/forum">
+                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/forum">
                                     Forum
                                 </Link>
-                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/events">
+                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/events">
                                     Wyzwania
                                 </Link>
-                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/exoplanets">
+                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/exoplanets">
                                     ExoSearch
                                 </Link>
                             </div>
@@ -96,13 +96,13 @@ const Navbar = () => {
                         </button>
                         {isInfoDropdownOpen && (
                             <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50">
-                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/aboutUs">
+                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/aboutUs">
                                     O nas
                                 </Link>
-                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/kontakt">
+                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/kontakt">
                                     Kontakt
                                 </Link>
-                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/faq">
+                                <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/faq">
                                     FAQ
                                 </Link>
                             </div>
