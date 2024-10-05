@@ -20,7 +20,7 @@ const Contact = () => {
                 <span className="flex mt-4">Wiadomość</span>
                 <textarea 
                 className="bg-slate-600 text-lg p-2 rounded shadow border border-slate-600 w-full focus:outline-none focus:shadow-lg transition"></textarea>
-                <input type="submit" value="Prześlij zgłoszenie" className="mt-4 bg-blue-600 rounded p-4 w-full hover:bg-blue-700 transition focus:bg-blue-800"/>
+                <input type="submit" value="Prześlij zgłoszenie" className="mt-4 text-lg bg-blue-600 rounded p-4 w-full hover:bg-blue-700 transition focus:bg-blue-800"/>
                 </form>
           </div>
         </div>
