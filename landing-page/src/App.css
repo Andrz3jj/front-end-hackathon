@@ -7,12 +7,6 @@ body {
   /*font-optical-sizing: auto;*/
   /*font-weight: 400;*/
   /*font-style: normal;*/
+  background-color: rgb(15 23 42);
 }
 
-.background {
-  background-image: url("../src/assets/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
