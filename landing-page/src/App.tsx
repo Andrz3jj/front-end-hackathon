@@ -11,6 +11,7 @@ import Challenges from "./components/Challenges";
 import Contact from "./components/Contact";
 import Faq from "./components/Faq";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import PostDetails from "@/components/PostDetails.tsx";
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
                 <Route path="/" element={<MainPage />} />
                 <Route path="/Exoplanets" element={<Exoplanets/>}/>
                 <Route path="/Forum" element={<Forum/>}/>
+                <Route path="/Forum/Posts/:postId" element={<PostDetails />} />
                 <Route path="/AboutUs" element={<AboutUs/>}/>
                 <Route path="/loginPage" element={<LoginPage/>}/>
                 <Route path="/registerPage" element={<RegisterPage/>} />
