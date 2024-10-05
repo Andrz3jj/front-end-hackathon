@@ -1,16 +1,32 @@
 import React from 'react';
+import Particles from './ui/particles';
 
+const color = "#ffffff";
 const WelcomePage: React.FC = () => {
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-slate-600 to-slate-700 text-white text-center">
-            <h1 className="text-5xl font-bold">Welcome to the Welcome Page!</h1>
-            <p className="text-xl mt-4 mb-6">We're glad to have you here. Let's get started!</p>
-            <button
-                className="px-6 py-3 bg-white text-slate-800 font-semibold rounded-lg hover:bg-slate-400 hover:text-white transition duration-300 ease-in-out"
-                onClick={() => alert('Button Clicked!')}
-            >
-                Get Started
-            </button>
+        <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-slate-800 to-black">
+            
+            <Particles 
+                className="absolute inset-0"
+                quantity={500}
+                ease={100}
+                color={color}
+                refresh
+            />
+           
+            <div className="relative z-10 flex flex-col items-center text-center space-y-6">
+                <h1 className="bg-gradient-to-r from-pink-500 to-indigo-500 bg-clip-text text-transparent text-6xl md:text-8xl font-extrabold tracking-tight">
+                    ExoSearch
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
+                   Seacrh for your favorite ExoPlanets
+                </p>
+                <button className="px-6 py-3 mt-4 bg-pink-600 text-white rounded-full text-lg font-medium transition-transform transform hover:scale-105">
+                    Explore Now
+                </button>
+            </div>
+            {/* Subtle overlay effect */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-50"></div>
         </div>
     );
 };
