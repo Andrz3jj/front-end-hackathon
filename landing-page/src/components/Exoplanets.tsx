@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "../App.css";
 import { Search, Planet, Star, ThermometerHalf, Rulers, Calendar } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -30,7 +31,7 @@ const examplePlanets = [
 ];
 
 const ExoplanetCard = ({ planet }) => (
-  <div className="bg-slate-700 hover:bg-slate-600 transition-colors duration-200">
+  <div className="bg-slate-700 border border-slate-600 rounded hover:bg-slate-600 transition-colors duration-200">
     <div className="p-6">
       <div className="flex justify-between items-start">
         <div>
