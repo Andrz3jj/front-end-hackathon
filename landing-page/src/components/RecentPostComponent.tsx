@@ -12,7 +12,7 @@ const RecentPostComponent: React.FC = () => {
 
     return (
         <div className="p-5 m-5 rounded-2xl bg-slate-900 font-mono">
-            {/* Toggle Button for Small and Medium Screens */}
+           
             <div className="lg:hidden mb-4">
                 <button
                     onClick={toggleMenu}

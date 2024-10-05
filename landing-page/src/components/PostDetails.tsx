@@ -20,7 +20,7 @@ const PostDetails: React.FC = () => {
     return (
         <>
             <div className="fixed flex justify-center items-center h-screen w-screen bg-slate-800">
-                <div className="m-5 w-full"> {/* Ustawiamy szerokość na pełną dla wszystkich ekranów z marginesem */}
+                <div className="m-5 w-full"> 
                     <div className="container mx-auto p-6 text-white bg-slate-700
                                     w-full sm:w-full md:w-full lg:w-1/2
                                     flex flex-col justify-between rounded-3xl">
