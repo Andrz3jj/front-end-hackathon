@@ -3,7 +3,7 @@ import * as Icon from 'react-bootstrap-icons';
 import { Link } from "react-router-dom";
 import exoplanet from "../assets/exoplanet.png";
 import aboutUs from "../assets/LogoofPPM.png";
-import Spark from "./ui/sparkles-text.tsx";
+ 
 
 const TopSection = () => {
   return (
@@ -11,7 +11,7 @@ const TopSection = () => {
       
       
       <div className="text-center mb-6">
-        <Spark text="Witaj, user!"></Spark>
+        <p>Witaj, user!</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
