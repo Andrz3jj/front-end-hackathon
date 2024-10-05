@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import questionsData from './../questions.json';
+import PostItem from './PostItem'; // Import nowego komponentu
+import { AnimatedSubscribeButton } from "@/components/ui/animated-subscribe-button.tsx";
 
 interface Post {
     id: number;
@@ -47,19 +49,7 @@ const PostComponent: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
     return (
         <div className="space-y-8">
             {currentPosts.map((item: Post) => (
-                <div key={item.id} className="rounded-2xl bg-slate-900 p-6 shadow-lg">
-                    <h2 className="text-2xl font-bold mb-2">
-                        <Link to={`/Forum/Posts/${item.id}`}>{item.title}</Link>
-                    </h2>
-                    <div className="flex justify-between items-center mb-4">
-                        <span className="text-sm text-slate-400">By: {item.user}</span>
-                        <div className="flex space-x-4">
-                            <span className="text-sm text-green-400">Upvotes: {item.upVotes}</span>
-                            <span className="text-sm text-red-400">Downvotes: {item.downVotes}</span>
-                        </div>
-                    </div>
-                    <p className="text-sm text-slate-300">{item.content}</p>
-                </div>
+                <PostItem key={item.id} post={item} />
             ))}
 
             {totalPages > 1 && (
