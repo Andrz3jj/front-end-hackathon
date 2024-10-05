@@ -1,17 +1,40 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../App.css";
 import logo from "../assets/logo-navbar.svg";
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true); 
+    const [lastScrollY, setLastScrollY] = useState(0); 
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    const handleScroll = () => {
+        if (typeof window !== 'undefined') {
+            if (window.scrollY > lastScrollY) {
+
+                setIsVisible(false);
+            } else {
+                setIsVisible(true);
+            }
+            setLastScrollY(window.scrollY); 
+        }
+    };
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', handleScroll); 
+            return () => {
+                window.removeEventListener('scroll', handleScroll); 
+            };
+        }
+    }, [lastScrollY]); 
+
     return (
-        <nav className="shadow sticky top-0 bg-slate-900 text-white z-50">
+        <nav className={`shadow sticky top-0 bg-slate-900 text-white z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4 md:px-12">
                 <div className="flex items-center mb-4 md:mb-0">
                     <img src={logo} className="w-12 mr-2" alt="ExoSky Logo" />
