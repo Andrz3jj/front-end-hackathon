@@ -67,14 +67,22 @@ const Navbar = () => {
                 <div className={`flex flex-col md:flex-row md:space-x-4 transition-all duration-500 ease-in-out ${isOpen ? 'max-h-64' : 'max-h-0'} overflow-hidden md:overflow-visible md:max-h-none`}>
                     <div className="relative">
                         <button
-                            className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl focus:outline-none"
+                            className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl focus:outline-none flex items-center"
                             onClick={toggleDropdown}
                         >
                             Community
+                            <svg className={`w-4 h-4 ml-2 transition-transform transform ${isDropdownOpen ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                            </svg>
                         </button>
                         {isDropdownOpen && (
+<<<<<<< HEAD
                             <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50">
                                 <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/forum">
+=======
+                            <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50 transition-all transform scale-y-100 opacity-100 origin-top duration-300">
+                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/forum">
+>>>>>>> navbar
                                     Forum
                                 </Link>
                                 <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Challenges">
@@ -89,14 +97,22 @@ const Navbar = () => {
 
                     <div className="relative">
                         <button
-                            className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl focus:outline-none"
+                            className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl focus:outline-none flex items-center"
                             onClick={toggleInfoDropdown}
                         >
                             Info
+                            <svg className={`w-4 h-4 ml-2 transition-transform transform ${isInfoDropdownOpen ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                            </svg>
                         </button>
                         {isInfoDropdownOpen && (
+<<<<<<< HEAD
                             <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50">
                                 <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/aboutUs">
+=======
+                            <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50 transition-all transform scale-y-100 opacity-100 origin-top duration-300">
+                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/aboutUs">
+>>>>>>> navbar
                                     O nas
                                 </Link>
                                 <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Contact">
