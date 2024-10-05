@@ -66,33 +66,32 @@ const AboutUs = () => {
 
                                 </li><br/>
                                 <li>Back-end developers:</li><br/>
+
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-                                    <div className="bg-slate-700 border border-slate-600 rounded flex items-center">
+                                    <div className="bg-slate-700 border border-slate-600 rounded flex items-center w-80 max-w-md mx-auto">
                                         <img src={Kamil} className="w-20 md:w-28 m-4 rounded-lg" />
-                                              <div className="ml-4 text-white flex flex-col items-center">
-                                                <span className="text-center">Kamil Konieczny</span>
-                                                <a href="https://github.com/kamelkali" 
+                                        <div className="ml-4 text-white flex flex-col items-center">
+                                            <span className="text-center">Kamil Konieczny</span>
+                                            <a href="https://github.com/kamelkali" 
                                                 className="flex items-center justify-center bg-white text-black rounded mt-2 hover:bg-gray-200 transition px-2 py-1">
-                                                    <img src={githubLogo} alt="Github logo" className="w-5 h-5 mr-2" />
-                                                    Github
-                                                </a>
-                                            </div>
-                                    </div>
-                                    <div className="bg-slate-700 border border-slate-600 rounded flex items-center">
-                                        <img src={Kacper} className="w-20 md:w-28 m-4 rounded-lg" />
-                                            <div className="ml-4 text-white flex flex-col items-center">
-                                                <span className="text-center">Kacper Zbyrad</span>
-                                                <a href="https://github.com/KacZbyDev" 
-                                                className="flex items-center justify-center bg-white text-black rounded mt-2 hover:bg-gray-200 transition px-2 py-1">
-                                                    <img src={githubLogo} alt="Github logo" className="w-5 h-5 mr-2" />
-                                                    Github  
-                                                </a>
-                                            </div>
+                                                <img src={githubLogo} alt="Github logo" className="w-5 h-5 mr-2" />
+                                                Github
+                                            </a>
+                                        </div>
                                     </div>
 
-                                </div>
-                    
+                                    <div className="bg-slate-700 border border-slate-600 rounded flex items-center w-80 w-72 mx-auto">
+                                        <img src={Kacper} className="w-20 md:w-28 m-4 rounded-lg" />
+                                        <div className="ml-4 text-white flex flex-col items-center">
+                                            <span className="text-center">Kacper Zbyrad</span>
+                                            <a href="https://github.com/KacZbyDev" 
+                                                className="flex items-center justify-center bg-white text-black rounded mt-2 hover:bg-gray-200 transition px-2 py-1">
+                                                <img src={githubLogo} alt="Github logo" className="w-5 h-5 mr-2" />
+                                                Github  
+                                            </a>
+                                        </div>
+                                    </div>
+                                    </div>
                             </ul>
                         </div>    
                     </div>
