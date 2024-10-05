@@ -44,7 +44,7 @@ const Challenges = () => {
                     </p>
                 </div>
 
-                {/* Quests Grid */}
+                
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {quests.map((quest) => (
                         <div
@@ -63,7 +63,7 @@ const Challenges = () => {
                                 <h2 className="text-2xl font-bold">{quest.title}</h2>
                             </div>
                             <div className="space-y-4">
-                                <p className="text-gray-300">{quest.description}</p>
+                                <p className="text-gray-300 justify text-center">{quest.description}</p>
                                 <div className="flex justify-between items-center">
                                     <span
                                         className={`text-sm px-3 py-1 rounded-full ${
@@ -83,7 +83,7 @@ const Challenges = () => {
                     ))}
                 </div>
 
-                {/* Action Button */}
+               
                 {selectedQuest && (
                     <div className="text-center mt-12">
                         <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50">
