@@ -5,33 +5,42 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isVisible, setIsVisible] = useState(true); 
-    const [lastScrollY, setLastScrollY] = useState(0); 
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isInfoDropdownOpen, setIsInfoDropdownOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
+    const toggleInfoDropdown = () => {
+        setIsInfoDropdownOpen(!isInfoDropdownOpen);
+    };
+
     const handleScroll = () => {
         if (typeof window !== 'undefined') {
             if (window.scrollY > lastScrollY) {
-
                 setIsVisible(false);
             } else {
                 setIsVisible(true);
             }
-            setLastScrollY(window.scrollY); 
+            setLastScrollY(window.scrollY);
         }
     };
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', handleScroll); 
+            window.addEventListener('scroll', handleScroll);
             return () => {
-                window.removeEventListener('scroll', handleScroll); 
+                window.removeEventListener('scroll', handleScroll);
             };
         }
-    }, [lastScrollY]); 
+    }, [lastScrollY]);
 
     return (
         <nav className={`shadow sticky top-0 bg-slate-900 text-white z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
@@ -56,9 +65,50 @@ const Navbar = () => {
                 </div>
 
                 <div className={`flex flex-col md:flex-row md:space-x-4 transition-all duration-500 ease-in-out ${isOpen ? 'max-h-64' : 'max-h-0'} overflow-hidden md:overflow-visible md:max-h-none`}>
-                    <Link className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl" to="/Exoplanets">Egzoplanety</Link>
-                    <Link className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl" to="/Forum">Forum</Link>
-                    <Link className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl" to="/AboutUs">O nas</Link>
+                    <div className="relative">
+                        <button
+                            className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl focus:outline-none"
+                            onClick={toggleDropdown}
+                        >
+                            Community
+                        </button>
+                        {isDropdownOpen && (
+                            <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50">
+                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/forum">
+                                    Forum
+                                </Link>
+                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/events">
+                                    Wyzwania
+                                </Link>
+                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/exoplanets">
+                                    ExoSearch
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="relative">
+                        <button
+                            className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl focus:outline-none"
+                            onClick={toggleInfoDropdown}
+                        >
+                            Info
+                        </button>
+                        {isInfoDropdownOpen && (
+                            <div className="absolute bg-slate-800 rounded-lg mt-2 p-2 space-y-2 z-50">
+                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/aboutUs">
+                                    O nas
+                                </Link>
+                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/kontakt">
+                                    Kontakt
+                                </Link>
+                                <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/faq">
+                                    FAQ
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+
                     <Link className="text-2xl m-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-center rounded p-2 transition active:shadow-xl" to="/loginPage">Zaloguj się</Link>
                 </div>
             </div>
