@@ -29,7 +29,7 @@ const AboutUs = () => {
                                     <div className="bg-slate-700 border border-slate-600 rounded flex items-center">
                                         <img src={Andrzej} className="w-28 m-4 rounded-lg" />
                                         <div className="ml-4 text-white flex flex-col items-center"> 
-                                            <span className="text-center">Andrzej Bajcarczyk</span> 
+                                             <span className="text-center">Andrzej Bajcarczyk</span> 
                                             <a href="https://github.com/Andrz3jj" 
                                             className="flex items-center justify-center bg-white text-black rounded mt-2 hover:bg-gray-200 transition px-2 py-1 w-24">
                                                 <img src={githubLogo} alt="Github logo" className="w-5 h-5 mr-2" />
