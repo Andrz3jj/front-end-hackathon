@@ -6,24 +6,24 @@ import { Card, CardContent } from "@/components/ui/card";
 const examplePlanets = [
   {
     name: "Kepler-186f",
-    distance: "582 light years",
-    type: "Super Earth",
+    distance: "582 lata świetlne",
+    type: "Super Ziemia",
     temperature: "188K",
     discovered: "2014",
     star: "Kepler-186"
   },
   {
     name: "TRAPPIST-1e",
-    distance: "39 light years",
-    type: "Rocky Earth-like",
+    distance: "39 lata świetlne",
+    type: "Skalista, przypominająca Ziemię",
     temperature: "251K",
     discovered: "2017",
     star: "TRAPPIST-1"
   },
   {
     name: "Proxima Centauri b",
-    distance: "4.2 light years",
-    type: "Super Earth",
+    distance: "4.2 lata świetlne",
+    type: "Super Ziemia",
     temperature: "234K",
     discovered: "2016",
     star: "Proxima Centauri"
@@ -81,7 +81,7 @@ const Exoplanets = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search exoplanets..."
+              placeholder="Wyszukaj egzoplanety..."
               className="bg-slate-700 shadow-lg rounded-lg placeholder-gray-400 p-4 pl-12 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white transition w-full text-lg"
             />
             <Search
