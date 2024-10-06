@@ -13,6 +13,8 @@ import Contact from "./components/Contact";
 import Faq from "./components/Faq";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PostDetails from "@/components/PostDetails.tsx";
+import Teams from "@/components/Teams.tsx";
+import Quiz from "@/components/Quiz.tsx";
 
 const App = () => {
     return (
@@ -31,6 +33,9 @@ const App = () => {
                 <Route path="/Challenges" element={<Challenges/>} />
                 <Route path="/Contact" element={<Contact/>} />
                 <Route path="/Faq" element={<Faq/>} />
+                <Route path="/Quiz" element={<Quiz/>} />
+                <Route path="/Teams" element={<Teams/>} />
+
             </Routes>
         </Router>
     );

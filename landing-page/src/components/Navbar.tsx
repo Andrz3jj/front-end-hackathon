@@ -95,12 +95,20 @@ const Navbar = () => {
                                         <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded border-b border-slate-600" to="/forum">
                                             Forum
                                         </Link>
-                                        <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Challenges">
-                                            Wyzwania
-                                        </Link>
                                         <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/exoplanets">
                                             ExoSearch
                                         </Link>
+                                        <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Quiz">
+                                            Quiz
+                                        </Link>
+                                        <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Challenges">
+                                            Wyzwania
+                                        </Link>
+                                        <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Teams">
+                                            Drużyny
+                                        </Link>
+
+
                                     </div>
                                 )}
                             </div>
