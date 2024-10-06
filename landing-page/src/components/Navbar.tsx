@@ -43,7 +43,7 @@ const Navbar = () => {
                 window.removeEventListener('scroll', handleScroll);
             };
         }
-    }, [lastScrollY]);
+    }, [handleScroll, lastScrollY]);
 
     useEffect(() => {
         if (!isVisible) {
@@ -102,10 +102,10 @@ const Navbar = () => {
                                             Quiz
                                         </Link>
                                         <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Challenges">
-                                            Wyzwania
+                                            Challenges
                                         </Link>
                                         <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Teams">
-                                            Drużyny
+                                            Teams
                                         </Link>
 
 
@@ -126,10 +126,10 @@ const Navbar = () => {
                                 {isInfoDropdownOpen && isVisible && (
                                     <div className="absolute top-full bg-slate-800 rounded-lg mt-2 p-2 space-y-2 min-w-[200px]">
                                         <Link className="block px-4 py-2 text-white hover:bg-slate-700 rounded border-b border-slate-600" to="/aboutUs">
-                                            O nas
+                                            About Us
                                         </Link>
                                         <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/Contact">
-                                            Kontakt
+                                            Contact
                                         </Link>
                                         <Link className="border-b border-slate-600 block px-4 py-2 text-white hover:bg-slate-700 rounded" to="/faq">
                                             FAQ
@@ -139,7 +139,7 @@ const Navbar = () => {
                             </div>
 
                             <Link className="text-2xl m-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-center rounded p-2 transition active:shadow-xl" to="/loginPage">
-                                Login
+                                Sign in
                             </Link>
                         </div>
                     </div>
