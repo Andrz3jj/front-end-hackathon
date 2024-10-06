@@ -6,6 +6,17 @@ const Dashboard = () => {
         <div className="min-h-screen bg-slate-900 text-white flex flex-col justify-between">
             {/* Main Content */}
             <div className="p-8 bg-slate-800 flex-1">
+                {/* Experience Bar Section */}
+                <div className="mb-8 bg-slate-700 p-6 rounded-lg shadow-lg">
+                    <div className="relative h-4 bg-slate-600 rounded-full overflow-hidden">
+                        <div
+                            className="absolute h-full bg-blue-500 transition-all duration-300"
+                            style={{ width: '25%' }} // 100/400 = 25%
+                        ></div>
+                    </div>
+                    <p className="text-center mt-2 text-slate-300">Brakuje ci 300xp do następnej nagrody (100/400)</p>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Forum Activity */}
                     <div className="bg-slate-700 p-6 rounded-lg shadow-lg hover:bg-slate-600 transition-colors duration-200">
@@ -39,9 +50,8 @@ const Dashboard = () => {
                     <button className="bg-slate-700 hover:bg-slate-600 transition-colors duration-200 text-white p-4 w-full rounded-lg shadow-lg">Ostatnia lekcja </button>
                     <button className="bg-slate-700 hover:bg-slate-600 transition-colors duration-200 text-white p-4 w-full rounded-lg shadow-lg">Twój team</button>
                 </div><br/>
-        
-                <Roadmap/>
 
+                <Roadmap/>
             </div>
         </div>
     );

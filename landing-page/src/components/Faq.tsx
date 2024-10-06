@@ -38,7 +38,7 @@ const Faq = () => {
     },
     {
       question: "Czy oferujecie wsparcie techniczne?",
-      answer: "Tak, oferujemy pełne wsparcie techniczne dla naszych Urztknowników 24/7."
+      answer: "Tak, oferujemy pełne wsparcie techniczne dla naszych Użtknowników 24/7."
     },
     {
       question: "Dlaczego Powinienem Korzystać akurat z ExoSearch?",
