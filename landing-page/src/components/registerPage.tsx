@@ -35,9 +35,9 @@ const RegisterPage = () => {
                 <div className="w-screen h-screen flex flex-col items-center justify-center container mx-auto px-4">
                     <div
                         className="text-center bg-slate-700 p-8 rounded shadow border border-slate-600 max-w-sm w-full">
-                        <span className="text-4xl md:text-5xl">Zarejestruj się</span>
+                        <span className="text-4xl md:text-5xl">Sign up</span>
                         <form onSubmit={onSubmit}>
-                            <span className="flex mt-4 text-sm md:text-base">Podaj nazwe uzytkownika</span>
+                            <span className="flex mt-4 text-sm md:text-base">Enter username</span>
                             <input
                                 type="text"
                                 placeholder="name"
@@ -47,7 +47,7 @@ const RegisterPage = () => {
 
                             />
 
-                            <span className="flex mt-4 text-sm md:text-base">Podaj email</span>
+                            <span className="flex mt-4 text-sm md:text-base">Enter e-mail</span>
                             <input
                                 type="text"
                                 placeholder="email@example.com"
@@ -55,7 +55,7 @@ const RegisterPage = () => {
                                 name="email"
                                 onChange={onChange}
                             />
-                            <span className="flex mt-4 text-sm md:text-base">Podaj hasło</span>
+                            <span className="flex mt-4 text-sm md:text-base">Enter password</span>
                             <input
                                 type="password"
                                 placeholder="••••••••"
@@ -63,7 +63,7 @@ const RegisterPage = () => {
                                 name="password"
                                 onChange={onChange}
                             />
-                            <span className="flex mt-4 text-sm md:text-base">Powtórz hasło</span>
+                            <span className="flex mt-4 text-sm md:text-base">Repeat password</span>
                             <input
                                 type="password"
                                 placeholder="••••••••"
@@ -72,12 +72,12 @@ const RegisterPage = () => {
                                 onChange={onChange}
                             />
                             <span className="flex justify-center mt-4 text-center w-full text-sm md:text-base">
-                    Masz już konto? Zaloguj się
-                    <Link className="text-blue-600 ml-1 hover:text-blue-700 transition" to="/loginPage">tutaj!</Link>
+                    Already have an account? Sign in
+                    <Link className="text-blue-600 ml-1 hover:text-blue-700 transition" to="/loginPage">here!</Link>
                             </span>
                             <input
                                 type="submit"
-                                value="Załóż konto"
+                                value="Create an account"
                                 className="mt-4 bg-blue-600 rounded p-4 w-full hover:bg-blue-700 transition focus:bg-blue-800"
                             />
                         </form>
