@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { Trophy, Sword, Brain } from 'lucide-react';
 import Ranking from './Table.tsx';
 const Challenges = () => {
-    const [selectedQuest, setSelectedQuest] = useState<number | null>(null); // Make sure to define the state type explicitly as number | null.
+    const [selectedQuest, setSelectedQuest] = useState<number | null>(null);
 
     const quests = [
         {
             id: 1,
             title: "Daily Champion",
             icon: <Trophy className="w-12 h-12 text-yellow-400" />,
-            description: "Wykonaj 2 Quizy z Wynikiem powyżej 90%",
+            description: "Complete 2 Quizzes with a Score above 90%",
             reward: "50 XP",
             difficulty: "Easy"
         },
@@ -17,7 +17,7 @@ const Challenges = () => {
             id: 2,
             title: "Mind Master",
             icon: <Brain className="w-12 h-12 text-purple-400" />,
-            description: "Udzielaj się na Forum przez 30 minut",
+            description: "Share on the Forum for 30 minutes",
             reward: "100 XP",
             difficulty: "Medium"
         },
@@ -25,7 +25,7 @@ const Challenges = () => {
             id: 3,
             title: "Ultimate Warrior",
             icon: <Sword className="w-12 h-12 text-red-400" />,
-            description: "Pokonaj 1 drużynę w bitwie teamowej",
+            description: "Beat 1 team in a team battle",
             reward: "200 XP",
             difficulty: "Hard"
         }
@@ -34,13 +34,12 @@ const Challenges = () => {
     return (
         <div className="bg-slate-800 text-white min-h-screen rounded-xl">
             <div className="container mx-auto px-4 py-16">
-                {/* Header Section */}
                 <div className="text-center space-y-4 mb-16">
                     <h1 className="text-4xl md:text-6xl font-bold animate-pulse">
-                        Wyzwania dnia
+                        Challenges of the day
                     </h1>
                     <p className="text-lg md:text-2xl text-gray-400">
-                        Wybierz Challenge i zdobądź nagrodę!
+                        Choose a Challenge and get a reward!
                     </p>
                 </div>
 
@@ -87,7 +86,7 @@ const Challenges = () => {
                 {selectedQuest && (
                     <div className="text-center mt-12">
                         <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50">
-                            Rozpocznij Wyzwanie
+                            Start the Challenge
                         </button>
                     </div>
                 )}
