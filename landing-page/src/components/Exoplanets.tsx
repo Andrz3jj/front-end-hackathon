@@ -7,26 +7,26 @@ const ExoplanetCard = ({ planet }) => (
       <div className="p-6">
         <div className="flex justify-between items-start">
           <div>
-            <h3 className="text-xl text-white mb-2"><span className="font-bold">Nazwa egzoplanety:</span> {planet.pl_name}</h3>
+            <h3 className="text-xl text-white mb-2"><span className="font-bold">Name of exoplanet:</span> {planet.pl_name}</h3>
             <div className="flex items-center text-gray-300 text-sm mb-1">
               <div className="w-4 h-4 mr-2" />
               <span>{planet.hostname}</span>
             </div>
             <div className="flex items-center text-gray-300 text-sm mb-1">
               <div className="w-4 h-4 mr-2" />
-              <span><span className="font-bold">rok odkrycia: </span>{planet.disc_year}</span>
+              <span><span className="font-bold">year of discovery: </span>{planet.disc_year}</span>
             </div>
             <div className="flex items-center text-gray-300 text-sm mb-1">
               <div className="w-4 h-4 mr-2" />
-              <span><span className="font-bold">Temperatura:</span> {planet.st_teff} K</span>
+              <span><span className="font-bold">Temperature:</span> {planet.st_teff} K</span>
             </div>
             <div className="flex items-center text-gray-300 text-sm mb-1">
               <div className="w-4 h-4 mr-2" />
-              <span><span className="font-bold">Dystans od ziemi:</span> {planet.sy_dist}</span>
+              <span><span className="font-bold">Distance from Earth:</span> {planet.sy_dist}</span>
             </div>
             <div className="flex items-center text-gray-300 text-sm">
               <div className="w-4 h-4 mr-2" />
-              <span><span className="font-bold">Kiedy odkryto:</span> {planet.discoverymethod}</span>
+              <span><span className="font-bold">When it was discovered:</span> {planet.discoverymethod}</span>
             </div>
           </div>
         </div>
