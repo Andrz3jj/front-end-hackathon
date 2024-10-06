@@ -52,7 +52,7 @@ const PostDetails: React.FC = () => {
                                     <Link
                                         className="hover:bg-purple-600 text-white bg-purple-700
                                                cursor-pointer p-4 rounded-full transition"
-                                        to="/Forum/Create"
+                                        to="/Forum/CreatePost"
                                     >
                                         Create New Post
                                     </Link>
@@ -62,7 +62,7 @@ const PostDetails: React.FC = () => {
                                         <Link
                                             className="hover:bg-purple-600 text-white bg-purple-700
                                                cursor-pointer p-4 rounded-full transition mx-2"
-                                            to="/Forum/Create"
+                                            to="/Forum/CreatePost"
                                         >
                                             Create New Post
                                         </Link>

@@ -20,10 +20,10 @@ const WelcomePage: React.FC = () => {
                     ExoSearch
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
-                   Znajdź swoją wymarzoną planetę! I Konkuruj z innymi użytkownikami o miejsce w Rankingu Mistrzów!
+                    Find your dream planet! And Compete with other users for a place in the Champions Ranking!
                 </p>
                 <Link className="px-6 py-3 mt-4 bg-pink-600 text-white rounded-full text-lg font-medium transition-transform transform hover:scale-105" to="/LoginPage">
-                    Exploruj Teraz
+                    Explore now
                 </Link>
             </div>
             

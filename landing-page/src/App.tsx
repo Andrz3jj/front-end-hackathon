@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PostDetails from "@/components/PostDetails.tsx";
 import Teams from "@/components/Teams.tsx";
 import Quiz from "@/components/Quiz.tsx";
+import CreatePost from "@/components/CreatePost.tsx";
 
 const App = () => {
     return (
@@ -35,6 +36,7 @@ const App = () => {
                 <Route path="/Faq" element={<Faq/>} />
                 <Route path="/Quiz" element={<Quiz/>} />
                 <Route path="/Teams" element={<Teams/>} />
+                <Route path="/Forum/CreatePost" element={<CreatePost/>} />
 
             </Routes>
         </Router>

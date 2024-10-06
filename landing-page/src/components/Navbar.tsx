@@ -85,7 +85,7 @@ const Navbar = () => {
                                     className="text-2xl m-2 hover:bg-slate-950 rounded p-2 transition active:shadow-xl focus:outline-none flex items-center"
                                     onClick={toggleDropdown}
                                 >
-                                    Społeczność
+                                    Community
                                     <svg className={`w-4 h-4 ml-2 transition-transform transform ${isDropdownOpen ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                                     </svg>
@@ -139,7 +139,7 @@ const Navbar = () => {
                             </div>
 
                             <Link className="text-2xl m-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-center rounded p-2 transition active:shadow-xl" to="/loginPage">
-                                Zaloguj się
+                                Login
                             </Link>
                         </div>
                     </div>
