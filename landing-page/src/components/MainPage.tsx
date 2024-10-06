@@ -6,7 +6,7 @@ const color = "#ffffff";
 
 const WelcomePage: React.FC = () => {
     return (
-        <div className="fixed inset-0 flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-slate-800 to-black">
+        <div className="mt-16 fixed inset-0 flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-slate-800 to-black">
             <Particles 
                 className="absolute inset-0"
                 quantity={100}
