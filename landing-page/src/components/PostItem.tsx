@@ -1,69 +1,25 @@
-import React, { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import NumberTicker from "@/components/ui/number-ticker.tsx";
 import { AnimatedSubscribeButton } from "@/components/ui/animated-subscribe-button.tsx";
 
-interface Post {
-    id: number;
-    title: string;
-    content: string;
-    upVotes: number;
-    downVotes: number;
-    user: string;
-}
 
-interface PostItemProps {
-    post: Post;
-}
 
-const PostItem: React.FC<PostItemProps> = ({ post }) => {
-    const [upVotes, setUpVotes] = useState(post.upVotes);
-    const [downVotes, setDownVotes] = useState(post.downVotes);
+
+const PostItem = ({ post }) => {
+    const [voteCount, setVoteCount] = useState(post.vote_count)
     const [isUpVoted, setIsUpVoted] = useState(false);
     const [isDownVoted, setIsDownVoted] = useState(false);
-
-    const handleUpVote = () => {
-        if (isUpVoted) {
-            // Jeśli użytkownik już upvotował, odwołaj upvote
-            setUpVotes(upVotes - 1);
-            setIsUpVoted(false);
-        } else {
-            // Dodaj upvote
-            setUpVotes(upVotes + 1);
-            setIsUpVoted(true);
-            // Jeśli wcześniej downvotował, odwołaj downvote
-            if (isDownVoted) {
-                setDownVotes(downVotes - 1);
-                setIsDownVoted(false);
-            }
-        }
-    };
-
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const handleDownVote = () => {
-        if (isDownVoted) {
-            // Jeśli użytkownik już downvotował, odwołaj downvote
-            setDownVotes(downVotes - 1);
-            setIsDownVoted(false);
-        } else {
-            // Dodaj downvote
-            setDownVotes(downVotes + 1);
-            setIsDownVoted(true);
-            // Jeśli wcześniej upvotował, odwołaj upvote
-            if (isUpVoted) {
-                setUpVotes(upVotes - 1);
-                setIsUpVoted(false);
-            }
-        }
-    };
-
+    useEffect(() => {
+        console.log(post.vote_count)
+    }, []);
     return (
         <div className="rounded-2xl bg-slate-900 p-6 shadow-lg">
             <h2 className="text-2xl font-bold mb-2">
-                <Link to={`/Forum/Posts/${post.id}`}>{post.title}</Link>
+                <Link to={`/Forum/Posts/${post.id}`}>{post.header}</Link>
             </h2>
             <div className="flex justify-between items-center mb-4">
-                <span className="text-sm text-slate-400">By: {post.user}</span>
+                <span className="text-sm text-slate-400">By: {post.profile.user.username}</span>
                 <div className="flex items-center space-x-4">
                     {/* Upvote Button */}
                     <div className="text-sm">
@@ -78,7 +34,7 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
 
                     {/* Wyświetlanie Głosek */}
                     <NumberTicker
-                        value={upVotes - downVotes}
+                        value={voteCount}
                         className="text-white font-bold text-2xl"
                     />
 
@@ -94,7 +50,7 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
                     </div>
                 </div>
             </div>
-            <p className="text-sm text-slate-300">{post.content}</p>
+            <p className="text-sm text-slate-300">{post.text}</p>
         </div>
     );
 };

@@ -15,6 +15,7 @@ const PostComponent: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
     const postsPerPage = 10;
     const [currentPage, setCurrentPage] = useState(1);
     const [showGreeting, setShowGreeting] = useState(false);
+    const [fetchedData, setFetchedData] = useState([]);
 
     const filteredPosts: Post[] = questionsData.filter(post =>
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -22,8 +23,6 @@ const PostComponent: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
     );
 
     const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
-    const startIdx = (currentPage - 1) * postsPerPage;
-    const currentPosts = filteredPosts.slice(startIdx, startIdx + postsPerPage);
 
     const handlePageChange = (page: number) => {
         if (page >= 1 && page <= totalPages) {
@@ -43,10 +42,18 @@ const PostComponent: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
             setShowGreeting(false);
         }
     }, [currentPage, totalPages]);
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/get-post')
+            .then(res => res.json())
+            .then(data=>setFetchedData(data))
+            .catch(error => console.log(error));
+        console.log(fetchedData)
+        }, []);
+
 
     return (
         <div className="space-y-8">
-            {currentPosts.map((item: Post) => (
+            {fetchedData.map((item:any) => (
                 <PostItem key={item.id} post={item} />
             ))}
 

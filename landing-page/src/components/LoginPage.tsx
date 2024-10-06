@@ -1,58 +1,77 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";  
 import "../App.css";
+import {useState} from "react";
 
 const LoginPage = () => {
-  return (
-    <>
-      <div className="bg-slate-800 text-white min-h-screen flex items-center justify-center">
-        <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center bg-slate-700 p-8 rounded shadow border border-slate-600 w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              Zaloguj się
-            </h1>
-            <form>
-              <label className="block text-sm sm:text-base md:text-lg mb-2">
-                Twój email
-              </label>
-              <input
-                type="email"
-                placeholder="email@example.com"
-                className="bg-slate-600 text-lg p-2 rounded shadow border border-slate-600 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-              />
 
-              <label className="block mt-4 text-sm sm:text-base md:text-lg mb-2">
-                Twoje hasło
-              </label>
-              <input
-                type="password"
-                placeholder="••••••••"
-                className="bg-slate-600 text-lg p-2 rounded shadow border border-slate-600 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-              />
+    const [formData,setFormData] = useState({
+        username: "",
+        password: "",
+    })
 
-              <div className="flex justify-center mt-4 text-center w-full text-sm md:text-base">
-                Nie masz konta? Załóż je
-                <Link
-                  className="text-blue-600 ml-1 hover:text-blue-700 transition"
-                  to="/registerPage"
-                >
-                  tutaj!
-                </Link>
-              </div>
-
-              <button
-                type="submit"
-                className="mt-4 bg-blue-600 rounded p-4 w-full hover:bg-blue-700 transition focus:bg-blue-800"
-              >
-                <Link className="text-2xl font-semibold" to="/WelcomePage">
-                  Zaloguj Się
-                </Link>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+    const onChange = (event:React.ChangeEvent<HTMLInputElement>) =>{
+        const { name, value } = event.target;
+        setFormData({
+            ...formData,
+            [name]:value
+        })
+    }
+    const onSubmit = (event: React.FormEvent<HTMLFormElement>)=>{
+        event.preventDefault();
+        fetch('http://127.0.0.1:8000/token/',{
+            method: 'POST',
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(token=>localStorage.setItem("token",token.Stringify()))
+            .catch(error => console.log(error));
+    }
+    return (
+        <>
+            <div className="bg-slate-800 text-white min-h-screen">
+                <div className="w-screen h-screen flex flex-col items-center justify-center container mx-auto px-4">
+                    <div
+                        className="text-center bg-slate-700 p-8 rounded shadow border border-slate-600 max-w-sm w-full">
+                        <span className="text-4xl md:text-5xl">Zaloguj się</span>
+                        <form onSubmit={onSubmit}>
+                            <span className="flex mt-4 text-sm md:text-base">Twój email</span>
+                            <input
+                                type="text"
+                                placeholder="nazwa uzytkownika"
+                                className="bg-slate-600 text-lg p-2 rounded shadow border border-slate-600 w-full focus:outline-none focus:shadow-lg transition"
+                                name="username"
+                                onChange={onChange}
+                            />
+                            <span className="flex mt-4 text-sm md:text-base">Twoje hasło</span>
+                            <input
+                                type="password"
+                                placeholder="••••••••"
+                                className="bg-slate-600 text-lg p-2 rounded shadow border border-slate-600 w-full focus:outline-none focus:shadow-lg transition"
+                                name = "password"
+                                onChange={onChange}
+                            />
+                            <span className="flex justify-center mt-4 text-center w-full text-sm md:text-base">
+                    Nie masz konta? Załóż je
+                    <Link className="text-blue-600 ml-1 hover:text-blue-700 transition" to="/registerPage">tutaj!</Link>
+                </span>
+                
+                <button
+                                type="submit"
+                                className="mt-4 bg-blue-600 rounded p-4 w-full hover:bg-blue-700 transition focus:bg-blue-800"
+                                
+                            >
+                
+                                <Link className="text-2xl font-semibold" to="">Zaloguj Się</Link>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default LoginPage;
