@@ -49,7 +49,7 @@ const Teams: React.FC = () => {
             <div className="grid grid-cols-2 gap-6">
 
                 <div className="bg-slate-700 p-5 rounded-lg shadow-md min-h-screen min-w-screen">
-                    <h2 className="text-xl font-semibold mb-4 text-slate-100">Dostępne Drużyny</h2>
+                    <h2 className="text-xl font-semibold mb-4 text-slate-100">Available Teams</h2>
                     <ul>
                         {teams.map((team) => (
                             <li
@@ -66,8 +66,8 @@ const Teams: React.FC = () => {
 
                 {selectedTeam && (
                     <div className="bg-slate-600 p-5 rounded-lg shadow-md">
-                        <h2 className="text-xl font-semibold mb-4 text-slate-100">Drużyna {selectedTeam.name}</h2>
-                        <h3 className="text-lg font-medium mb-2 text-slate-200">członkowie:</h3>
+                        <h2 className="text-xl font-semibold mb-4 text-slate-100">Team: {selectedTeam.name}</h2>
+                        <h3 className="text-lg font-medium mb-2 text-slate-200">Members:</h3>
                         <ul className="list-disc ml-5">
                             {selectedTeam.users.length > 0 ? (
                                 selectedTeam.users.map((user, index) => (
@@ -83,7 +83,7 @@ const Teams: React.FC = () => {
                             className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-200"
                             onClick={handleRequestToJoin}
                         >
-                            Spytaj o dołączenie
+                            Ask to join
                         </button>
                     </div>
                 )}
@@ -91,9 +91,9 @@ const Teams: React.FC = () => {
 
 
             <div className="mt-10 bg-slate-700 p-5 rounded-lg shadow-md">
-                <h2 className="text-xl font-semibold mb-4 text-slate-100">Stwórz własną drużynę</h2>
+                <h2 className="text-xl font-semibold mb-4 text-slate-100">Create your own team</h2>
                 <div className="mb-4">
-                    <label className="block mb-2 font-medium text-slate-200">Nazwa Drużyny</label>
+                    <label className="block mb-2 font-medium text-slate-200">Team name</label>
                     <input
                         type="text"
                         className="p-2 border border-slate-500 rounded-lg w-full bg-slate-800 text-slate-200"
@@ -106,7 +106,7 @@ const Teams: React.FC = () => {
                     className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all duration-200"
                     onClick={handleCreateTeam}
                 >
-                    Stwórz Drużynę
+                    Create Team
                 </button>
             </div>
         </div>
