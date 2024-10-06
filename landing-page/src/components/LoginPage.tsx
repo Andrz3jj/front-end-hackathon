@@ -35,17 +35,17 @@ const LoginPage = () => {
                 <div className="w-screen h-screen flex flex-col items-center justify-center container mx-auto px-4">
                     <div
                         className="text-center bg-slate-700 p-8 rounded shadow border border-slate-600 max-w-sm w-full">
-                        <span className="text-4xl md:text-5xl">Zaloguj się</span>
+                        <span className="text-4xl md:text-5xl">Sign in</span>
                         <form onSubmit={onSubmit}>
-                            <span className="flex mt-4 text-sm md:text-base">Twój email</span>
+                            <span className="flex mt-4 text-sm md:text-base">Your e-mail</span>
                             <input
                                 type="text"
-                                placeholder="nazwa uzytkownika"
+                                placeholder="username"
                                 className="bg-slate-600 text-lg p-2 rounded shadow border border-slate-600 w-full focus:outline-none focus:shadow-lg transition"
                                 name="username"
                                 onChange={onChange}
                             />
-                            <span className="flex mt-4 text-sm md:text-base">Twoje hasło</span>
+                            <span className="flex mt-4 text-sm md:text-base">Your password</span>
                             <input
                                 type="password"
                                 placeholder="••••••••"
@@ -54,8 +54,8 @@ const LoginPage = () => {
                                 onChange={onChange}
                             />
                             <span className="flex justify-center mt-4 text-center w-full text-sm md:text-base">
-                    Nie masz konta? Załóż je
-                    <Link className="text-blue-600 ml-1 hover:text-blue-700 transition" to="/registerPage">tutaj!</Link>
+                    Don't have an account? Create one
+                    <Link className="text-blue-600 ml-1 hover:text-blue-700 transition" to="/registerPage">here!</Link>
                 </span>
                 
                 <button
@@ -64,7 +64,7 @@ const LoginPage = () => {
                                 
                             >
                 
-                                <Link className="text-2xl font-semibold" to="">Zaloguj Się</Link>
+                                <Link className="text-2xl font-semibold" to="">Sign in</Link>
                             </button>
                         </form>
                     </div>
