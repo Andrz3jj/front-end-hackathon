@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import questionsData from './../questions.json';
-import PostItem from './PostItem'; // Import nowego komponentu
+import PostItem from './PostItem';
 
 interface Post {
     id: number;
@@ -48,13 +48,13 @@ const PostComponent: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
             .then(data=>setFetchedData(data))
             .catch(error => console.log(error));
         console.log(fetchedData)
-        }, []);
+        }, [fetchedData]);
 
 
     return (
         <div className="space-y-8">
-            {fetchedData.map((item:any) => (
-                <PostItem key={item.id} post={item} />
+            {fetchedData.map((item:never, index) => (
+                <PostItem key={index} post={item} />
             ))}
 
             {totalPages > 1 && (
@@ -88,7 +88,7 @@ const PostComponent: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
             <div
                 className={`text-center mt-8 text-lg font-bold transition-opacity duration-1000 ${showGreeting ? 'opacity-100' : 'opacity-0'}`}
             >
-                To jest koniec.
+                This is the end.
             </div>
         </div>
     );
