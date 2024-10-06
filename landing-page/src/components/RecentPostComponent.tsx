@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import questionsData from './../questions.json'; // Default import
+import questionsData from './../questions.json';
 
 const RecentPostComponent: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,13 +24,10 @@ const RecentPostComponent: React.FC = () => {
                     <i className={`bi ${isOpen ? 'bi-chevron-up' : 'bi-chevron-down'} text-2xl`}></i>
                 </button>
             </div>
-
-            {/* Title for Large Screens */}
             <div className="hidden lg:block text-center mb-4">
                 <span className="text-3xl font-bold tracking-widest">Recent Questions</span>
             </div>
 
-            {/* Collapsible Content */}
             <div className={`${isOpen ? 'block' : 'hidden'} lg:block`}>
                 <ul className="mt-4 space-y-2 max-h-96 overflow-y-auto">
                     {questionsData.slice(0, 6).map((item) => (
