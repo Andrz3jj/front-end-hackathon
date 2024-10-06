@@ -15,17 +15,17 @@ const AboutUs = () => {
                         <div className="max-w-4xl mx-auto">
                             <span className="font-bold text-xl sm:text-2xl block mb-4 text-center justify">Prawy Przycisk Myszy</span>
                             <p className="text-sm sm:text-base lg:text-lg text-center justify">
-                                to zespół kreatywnych i pasjonatów technologii programistów, 
-                                którzy postanowili połączyć swoje umiejętności, 
-                                by stworzyć innowacyjną stronę edukacyjną o egzoplanetach. 
-                                Naszym celem jest zbliżenie użytkowników do fascynującego świata 
-                                planet znajdujących się poza Układem Słonecznym, 
-                                w sposób przystępny zarówno dla laików, jak i dla pasjonatów astronomii.
+                                is a team of creative and passionate technology developers,
+                                Who decided to combine their skills,
+                                to create an innovative educational website about exoplanets.
+                                Our goal is to bring users closer to the fascinating world of
+                                of planets located outside the solar system,
+                                in a way that is accessible to both the layperson and astronomy enthusiasts.
                             </p>
                         </div>
 
                         <div className="text-base sm:text-lg pt-8 md:pt-12 lg:pt-16">
-                            <p className="mb-8 justify text-center">Nasz zespół składa się z programistów z różnych dziedzin:</p>
+                            <p className="mb-8 justify text-center">Our team consists of programmers from various fields:</p>
                             <ul className="list-disc list-inside space-y-8">
                                 
                                     <p className="mb-6 text-center ">Front-end developers:</p>
