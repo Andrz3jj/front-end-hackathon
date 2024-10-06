@@ -1,4 +1,3 @@
-import React from 'react';
 import Roadmap from "./RoadMap.tsx"
 
 const Dashboard = () => {
@@ -14,19 +13,19 @@ const Dashboard = () => {
                             style={{ width: '25%' }} // 100/400 = 25%
                         ></div>
                     </div>
-                    <p className="text-center mt-2 text-slate-300">Brakuje ci 300xp do następnej nagrody (100/400)</p>
+                    <p className="text-center mt-2 text-slate-300">You are 300xp short of your next award (100/400)</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Forum Activity */}
                     <div className="bg-slate-700 p-6 rounded-lg shadow-lg hover:bg-slate-600 transition-colors duration-200">
-                        <h2 className="text-xl font-bold mb-4">Ostatnia aktywność na forum:</h2>
-                        <p className="min-h-24">Brak aktywności na forum. Sprawdź później.</p>
+                        <h2 className="text-xl font-bold mb-4">Recent forum activity:</h2>
+                        <p className="min-h-24">No activity on the forum. Check back later.</p>
                     </div>
 
                     {/* Best Teams */}
                     <div className="bg-slate-700 p-6 rounded-lg shadow-lg hover:bg-slate-600 transition-colors duration-200">
-                        <h2 className="text-xl font-bold mb-4">Najlepsze teamy</h2>
+                        <h2 className="text-xl font-bold mb-4">Top teams</h2>
                         <ul className="space-y-2 min-h-24">
                             <li>Team Alpha - 1500 pkt</li>
                             <li>Team Beta - 1350 pkt</li>
@@ -36,7 +35,7 @@ const Dashboard = () => {
 
                     {/* Last Team Battles */}
                     <div className="bg-slate-700 p-6 rounded-lg shadow-lg hover:bg-slate-600 transition-colors duration-200">
-                        <h2 className="text-xl font-bold mb-4">Ostatnie bitwy teamowe:</h2>
+                        <h2 className="text-xl font-bold mb-4">Recent team battles:</h2>
                         <ul className="space-y-2 min-h-24">
                             <li>Alpha vs Beta - 3:2</li>
                             <li>Gamma vs Delta - 1:3</li>
@@ -47,8 +46,8 @@ const Dashboard = () => {
 
                 {/* Footer Section */}
                 <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button className="bg-slate-700 hover:bg-slate-600 transition-colors duration-200 text-white p-4 w-full rounded-lg shadow-lg">Ostatnia lekcja </button>
-                    <button className="bg-slate-700 hover:bg-slate-600 transition-colors duration-200 text-white p-4 w-full rounded-lg shadow-lg">Twój team</button>
+                    <button className="bg-slate-700 hover:bg-slate-600 transition-colors duration-200 text-white p-4 w-full rounded-lg shadow-lg">Last lesson </button>
+                    <button className="bg-slate-700 hover:bg-slate-600 transition-colors duration-200 text-white p-4 w-full rounded-lg shadow-lg">Your Team</button>
                 </div><br/>
 
                 <Roadmap/>
