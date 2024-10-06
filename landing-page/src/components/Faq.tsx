@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const FAQItem = ({ question, answer }) => {
+interface FAQItemProps {
+  question: string;
+  answer: string;
+}
+
+const FAQItem = ({ question,  answer }: FAQItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
